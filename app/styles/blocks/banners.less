@@ -1,0 +1,219 @@
+.banner-wrap {
+  position: relative;
+  .middle-block {
+    position: relative;
+  }
+  
+  h3.sub-title {
+    padding: @m-grid @m-grid @m-grid-small;
+    font-size: 14px;
+    background-color: @blue-color; 
+    display: inline-block;
+  }
+  .caption {
+    font-size: 1rem;
+    padding: 4rem 2rem;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    word-wrap: break-word;
+
+    @media @from-tablet-portrait {
+      padding: 3rem 0;
+    }
+    h2 {
+      font: 4.16em/1.12 @font-family-bold;
+      [lang="th"] & {
+        font-family: @font-family-bold-th;
+      }
+      padding-bottom: 0;
+      @media @from-tablet-portrait {
+        font-size: 2.76rem;
+      }
+    }
+
+    .inner-container {
+      display: table;
+      .size(100%);
+      @media @only-desktop-lg {
+        .content {
+          max-width: 58vw;
+        }
+      }
+      .content {
+        &:extend(.text-medium);
+        @media @from-tablet {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+        }
+      }
+      .latest-issue-color {
+        width: 14px;
+        height: 45px;
+        background: #95c848;
+        display: inline-block;
+        margin-right: 20px;
+      }
+      .latest-issue-content {
+        display: inline-block;
+        p {
+          display: block;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+  .item {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    .button-group {
+      margin-top: 3rem;
+      @media @tablet-portrait-only {
+        margin-top: 1rem;
+      }
+      text-align: left;
+      .btn {
+        vertical-align: middle;
+        float: none;
+        display: inline-block;
+        &+.btn {
+          margin-left: 1rem;
+        }
+      }
+      .text-medium {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .sub-title-2 {
+        @media @tablet-desktop {
+          float: left;
+        }
+        margin-top: 5px;
+        margin-right: @grid;
+      }
+    }
+
+    .thumb {
+      height: 500px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      @media @tablet-only {
+        height: 45vw;
+      }
+      @media @from-mobile-small {
+        height: 40rem;
+      }
+    }
+
+    @media @from-mobile {
+      height: auto;
+      .thumb {
+        overflow: hidden;
+        max-height: none;
+      }
+      .button-group {
+        margin: 2rem 0 0;
+        overflow: hidden;
+        padding-top: 1px;
+
+      }
+    }
+  }
+  .book-img {
+    max-width: 380px;
+    @media @tablet-desktop {
+      float: right;
+      width: 32%;
+      margin-left: 50px;
+    }
+    @media @from-tablet-portrait{
+      width: 50%;
+      margin-bottom: 30px;
+    }
+    img {
+      margin-left: 0;
+      width: 240px;
+      height: 315px;
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+    }
+  }
+  .desc {
+    overflow: hidden;
+    word-wrap: break-word;
+    max-width: 50vw;
+    margin-bottom: 30px;
+
+    @media @from-tablet-portrait {
+      max-width: 100%;
+    }
+  }
+  @media @from-mobile {
+    padding-top: 6rem;
+    .intro {
+      font-size: 1.76rem;
+    }
+  }
+
+  .subscribe {
+    border: 5px solid @blue-color;
+    padding: 7px 10px;
+    display: inline-block;
+    
+    .no-touch.desktop & {
+      &:hover {
+        background-color: @blue-color;
+      }
+    }
+
+    &:active {
+      background-color: @blue-color;
+    }
+  }
+}
+
+.banner-carousel {
+  .middle-block > *, .slick-dots{
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 0.5s;
+  }
+  .content {
+    transition: all 0.55s;
+  }
+  .button-group {
+    transition: all 0.6s;
+  }
+  .slick-dots {
+    transition: all 0.65s;
+  }
+  .item {
+    display: none;
+    &.slick-active {
+      display: block;
+    }
+  }
+  .loaded & {
+    .item {
+      display: block;
+    }
+    .middle-block > * , .slick-dots{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

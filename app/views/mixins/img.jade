@@ -1,0 +1,16 @@
+mixin img(src, alt)
+  - if (typeof(src) === 'undefined') src = 'images/transparent.png'
+  - if (typeof(alt) === 'undefined') alt = ''
+  img(src="#{src}", alt="#{alt}")&attributes(attributes)
+
+mixin img-compare(img, text)
+  span(data-compare).check-icon
+  a(href="#", data-item-link)
+    +img(img).product-img(data-item-image)
+    p.text-medium.mar-top-sm(data-item-title) SCB Beyond Platinum 1
+
+mixin img-caption(img, caption)
+  .image-caption
+    +img(img)
+    .caption&attributes(attributes)
+      p.text #{caption}

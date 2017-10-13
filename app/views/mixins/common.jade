@@ -1,0 +1,59 @@
+mixin banner-book-image(src, book, subtitle, title, content, issue)
+  - if (typeof(src) === 'undefined') src = 'images/upload/magazine-bg.jpeg'
+  - if (typeof(book) === 'undefined') book = 'images/upload/book-1.jpg'
+  - if (typeof(title) === 'undefined') title = 'Home Improvement Is That Easy'
+  - if (typeof(content) === 'undefined') content = 'Whether you want a major home renovation or a small one. At SCB, we offer financing options to meet your needs.'
+    section.item
+      .thumb(style="background-image: url("+src+");")
+      .caption
+        .inner-container
+          .middle-block
+            .book-img
+              +img(book)
+            .desc
+              h3.sub-title.txt-white #{subtitle}
+              h2.intro.txt-white.mar-top #{title}
+              p.content.txt-white.mar-top-xs #{content}
+              .latest-issue
+                .latest-issue-color.mar-top
+                .latest-issue-content.mar-top
+                  p.sub-title.txt-white LATEST ISSUE
+                  p.sub-title-2.txt-white #{issue}
+              .subscribe.mar-top
+                a
+                  p.txt-mediumer SUBSCRIBE TO NEWSLETTER
+
+mixin story(src, title, content)
+  - if (typeof(src) === 'undefined') src = 'images/upload/photo-md-15.jpg'
+  - if (typeof(title) === 'undefined') title = 'Opportunities In Volatile Markets'
+  - if (typeof(content) === 'undefined') content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempo.'
+    +link().story&attributes(attributes)
+      .thumb(style="background-image: url("+src+");")
+      .caption
+        .desc
+          - if (typeof(title) !== 'undefined')
+            h2.title #{title}
+          p.text-mediumer #{content}
+
+mixin product(src, title)
+  - if (typeof(src) === 'undefined') src = 'images/upload/thumb-1.jpg'
+  - if (typeof(title) === 'undefined') title = 'Your Personal Needs'
+    +link().product.thumb-default
+      figure
+        .thumb(style="background-image: url("+src+")")
+      figcaption
+        h3.title #{title}
+
+mixin news(src, news1, news2, news3)
+  - if (typeof(src) === 'undefined') src = 'images/upload/thumb-4.jpg'
+  - if (typeof(title) === 'undefined') title = 'Your Personal Needs'
+    .news-thumb&attributes(attributes)
+      .inner
+        .thumb(style="background-image: url("+src+")")
+        .news-info
+          .item
+            p.text-medium #{news1}
+          .item
+            p.text-medium #{news2}
+          .item
+            p.text-medium #{news3}

@@ -1,0 +1,285 @@
+// Structure
+.page {
+  overflow: hidden;
+}
+.responsivegrid {
+  position: relative;
+  z-index: 1;
+  @media @from-tablet-portrait {
+    padding-top: 66px;
+  }
+}
+.inner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media @from-tablet-portrait {
+    padding: 0 @m-grid;
+  }
+}
+.inner-container-left {
+  position: relative;
+  .calc(margin-left, "(100vw - 1200px)/2");
+  padding-left: 30px;
+  @media @from-tablet {
+    margin-left: 0;
+  }
+  @media @from-tablet-portrait {
+    padding-left: @m-grid;
+  }
+  @media @from-mobile {
+    padding-left: 0;
+  }
+}
+[class*='wrapper'],header{
+  .clearfix();
+
+}
+
+.wrapper {
+  background: #fafafa;
+}
+.outer {
+  padding: 90px 0;
+  @media @from-tablet {
+    padding: 40px 0;
+  }
+}
+@media @tablet-portrait-only {
+  .col-md-4 {
+    .row{
+      &:before,
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+.row-full {
+  .clearfix();
+}
+
+.col-haft {
+  @media @tablet-desktop {
+    float: left;
+    width: 50%;
+  }
+}
+
+.no-scrolling {
+  overflow: hidden;
+  height: 100%;
+  #header {
+    z-index: 0;
+  }
+}
+.no-scrolling-nav {
+  overflow: hidden;
+  height: 100%;
+}
+.no-mar {
+  margin: 0!important;
+}
+.m-mar-top {
+  @media @from-tablet-portrait {
+    margin-top: 15px;
+  }
+}
+.mar-top-md {
+  @media @desktop-only {
+    margin-top: 50px;
+  }
+  @media @from-tablet-portrait {
+    margin-top: 30px;
+  }
+}
+.mar-bot-md {
+  @media @desktop-only {
+    margin-bottom: 50px;
+  }
+  @media @from-tablet-portrait {
+    margin-bottom: 30px;
+  }
+}
+.mar-bot-lg {
+  @media @desktop-only {
+    margin-bottom: 90px;
+  }
+  @media @from-tablet-portrait {
+    margin-bottom: 40px;
+  }
+}
+.mar-top-lg {
+  @media @desktop-only {
+    margin-top: 90px;
+  }
+  @media @from-tablet-portrait {
+    margin-top: 40px;
+  }
+}
+.mar-top-xlg {
+  @media @desktop-only {
+    margin-top: 130px;
+  }
+  @media @from-tablet-portrait {
+    margin-top: 40px;
+  }
+}
+.mar-top {
+  @media @desktop-only {
+    margin-top: @grid;
+  }
+  @media @from-tablet-portrait {
+    margin-top: @m-grid;
+  }
+}
+.mar-right {
+  @media @desktop-only {
+    margin-right: @grid;
+  }
+  @media @from-tablet-portrait {
+    margin-right: @m-grid;
+  }
+}
+.mar-top-xs {
+  margin-top: 8px;
+}
+.mar-bot-xs {
+  margin-bottom: 8px;
+}
+.mar-top-sm {
+  margin-top: @m-grid;
+}
+.mar-bot-sm {
+  margin-bottom: @m-grid;
+}
+.mar-right-sm {
+  margin-right: @m-grid;
+}
+.mar-bot {
+  @media @desktop-only {
+    margin-bottom: @grid;
+  }
+  @media @from-tablet-portrait {
+    margin-bottom: 15px;
+  }
+}
+.mar-right {
+  @media @desktop-only {
+    margin-right: @grid;
+  }
+  @media @from-tablet-portrait {
+    margin-right: 15px;
+  }
+}
+.mar-left {
+  @media @desktop-only {
+    margin-left: @grid;
+  }
+  @media @from-tablet-portrait {
+    margin-left: 15px;
+  }
+}
+.pad-left {
+  @media @desktop-only {
+    padding-left: 50px;
+  }
+  @media @from-tablet-portrait {
+    padding-left: 25px;
+  }
+}
+.pad-top-xlg {
+  @media @desktop-only {
+    padding-top: 200px;
+  }
+  @media @from-tablet-portrait {
+    padding-top: 100px;
+  }
+}
+.pad-top-lg {
+  @media @desktop-only {
+    padding-top: 90px;
+  }
+  @media @from-tablet-portrait {
+    padding-top: 40px;
+  }
+  @media @from-mobile-small {
+    padding-top: 20px;
+  }
+}
+
+.pad-bot-xlg {
+  @media @desktop-only {
+    padding-bottom: 150px;
+  }
+  @media @from-tablet-portrait {
+    padding-bottom: 50px;
+  }
+}
+.pad-bot-lg {
+  @media @desktop-only {
+    padding-bottom: 90px;
+  }
+  @media @from-tablet-portrait {
+    padding-bottom: 40px;
+  }
+  @media @from-mobile-small {
+    padding-bottom: 20px;
+  }
+}
+.pad-top-md {
+  padding-top: 50px;
+  @media @from-mobile {
+    padding-top: 25px;
+  }
+}
+.pad-bot-md {
+  padding-bottom: 50px;
+  @media @from-mobile {
+    padding-bottom: 25px;
+  }
+}
+.pad-top-min {
+  padding-top: 30px;
+}
+.pad-bot-min {
+  padding-bottom: 30px;
+}
+.pad-top-tiny {
+  padding-top: 15px;
+}
+
+@media @from-tablet-portrait {
+  .row {
+    margin-left: -7px;
+    margin-right: -7px;
+    [class*='col-'] {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+  }
+}
+@media @tablet-portrait-only {
+  .tablet-portrait-mar-top-none {
+    margin-top: 0;
+  }
+}
+
+.homepage {
+  .wrapper {
+    > .inner-container > .row {
+      > [class*='col-'] {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 0.5s 0.05s;
+        &.move-up {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+    }
+
+  }
+}

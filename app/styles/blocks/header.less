@@ -1,0 +1,216 @@
+#header {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background: white;
+  .logo {
+    max-width: 135px;
+    float: left;
+    @media @from-mobile {
+      margin-top: 3px;
+    }
+  }
+  .top-header {
+    background: #5c626a;
+    font-size: 13px;
+    padding: 10px 0;
+    overflow: hidden;
+    .inner-top {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 @grid;
+    }
+    .top-nav {
+      .calc(margin-left, "135px + 30px"); // width of logo and margin-left of global-nav
+      li {
+        padding: 0 40px 0 0;
+        @media @tablet-only {
+          padding-right: 30px;
+        }
+      }
+    }
+    .top-nav-right {
+      float: right;
+      li {
+        padding: 0 0 0 40px;
+        @media @tablet-only {
+          padding-left: 30px;
+        }
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+    .top-nav, .top-nav-right {
+      li {
+        float: left;
+
+        a {
+          color: rgba(255,255,255,0.5);
+          font-size: 1em;
+          position: relative;
+          .transition(all 0.3s);
+          .no-touch.desktop & {
+            &:hover {
+              color: white;
+            }
+          }
+          &.active{
+            color: white;
+            &:after {
+              content: '';
+              width: 0px;
+              height: 0px;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-bottom: 5px solid white;
+              display: inline-block;
+              position: absolute;
+              bottom: -9px;
+              left: 50%;
+              margin-left: -5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .inner-header {
+    background: #95c848;
+    .content {
+      .clearfix();
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: @grid-small @grid 0;
+      @media @from-tablet-portrait {
+        padding: @m-grid-small @m-grid;
+      }
+    }
+  }
+  .right-header {
+    float: right;
+    .icons {
+      &:extend(.txt-purple);
+      font-size: 23px;
+      float: left;
+      margin: 10px @grid 0 0;
+      @media @from-mobile {
+        margin-right: @m-grid;
+        margin-left: 0;
+      }
+      @media @from-mobile-small {
+        margin-right: @m-grid-small;
+      }
+      &:nth-of-type(1) {
+        margin-left: @grid;
+        @media @from-mobile {
+          margin-left: 0;
+        }
+      }
+      .no-touch.desktop & {
+        &:hover {
+          color: @dark-purple-color;
+        }
+      }
+    }
+  }
+}
+.language {
+  .right-header & {
+    float: left;
+    margin-top: 15px;
+
+    li {
+      float: left;
+      border-right: 1px solid #ccc;
+      padding: 0 @m-grid-small;
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+      a {
+        color: black;
+        &:active,
+        .no-touch.desktop &:hover  {
+          &:extend(.txt-purple);
+        }
+      }
+    }
+  }
+  .mega-menu-mobile & {
+    float: none;
+    text-align: center;
+    padding: 25px 0;
+    li {
+      display: inline-block;
+      float: none;
+      color: white;
+      padding: 0 @m-grid-small;
+      border-right: 1px solid #656d73;
+      &:last-child {
+        border-right: none;
+      }
+      a {
+        color: rgba(255,255,255,0.5);
+      }
+    }
+  }
+
+  li {
+    &:extend(.txt-purple);
+    font-size: 1.1rem;
+  }
+}
+.digital-menu {
+  position: relative;
+  display: inline-block;
+  ul {
+    position: absolute;
+    right: 0;
+    top: 75px;
+    z-index: 10;
+    width: 204px;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.08);
+    display: none;
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid white;
+      top: -5px;
+      right: 20px;
+      position: absolute;
+    }
+    li {
+      overflow: hidden;
+    }
+    a {
+      color: black;
+      font-size: @font-medium;
+      background-repeat: no-repeat;
+      background-position: 0 center;
+      padding: 15px 0 15px 0;
+      display: inline-block;
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .visual-img {
+        width: 24px;
+        text-align: center;
+        margin-right: 15px;
+      }
+
+      &:hover {
+        &:extend(.txt-purple);
+      }
+    }
+  }
+}

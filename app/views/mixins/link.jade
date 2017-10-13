@@ -1,0 +1,67 @@
+mixin link(title, href, text)
+  - if (typeof(text) === 'undefined') text = title
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)&attributes(attributes)
+    if block
+      block
+    else
+      !=text
+
+mixin link-img(src, title, href)
+  - if (typeof(text) === 'undefined') text = title
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)&attributes(attributes)
+    img(src="#{src}", alt="#{title}")
+    if block
+      block
+
+mixin link-middle(title, href)
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)
+    span&attributes(attributes) #{title}
+
+mixin link-download(title, date, href)
+  - if (typeof(date) === 'undefined') date = '14-28 Mar'
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)
+    span&attributes(attributes) #{title}
+      span #{date}
+
+mixin link-middle-desc(title, desc, href)
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)
+    span&attributes(attributes)
+      div #{title}
+      div
+        p.text #{desc}
+
+mixin link-thumb(src, title, href)
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)&attributes(attributes)
+    img(src="#{src}", alt="#{title}")
+    span #{title}
+
+mixin link-thumb-wrap(src, title, href)
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)&attributes(attributes)
+    span.visual-img
+      img(src="#{src}", alt="#{title}")
+    span #{title}
+
+mixin linkNav(title, href, text)
+  - if (typeof(text) === 'undefined') text = title
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)&attributes(attributes)
+    span #{text}
+
+mixin item-review(src, title, href)
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)&attributes(attributes)
+    span.name-card-reviewed #{title}
+
+mixin life-stage(src, title, href)
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)&attributes(attributes)
+    span.visual-img
+      img(src="#{src}", alt="#{title}")
+    span.text #{title}

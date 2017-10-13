@@ -1,0 +1,37 @@
+include mixins/all
+
+doctype html
+html(class="no-js", lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge, chrome=1")
+    title Sitemap
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    meta(name="robots", content="noindex, nofollow")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, minimal-ui")
+    link(rel="icon", href="favicon.ico", type="image/x-icon", sizes="16x16")
+    link(href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900", rel="stylesheet")
+    link(rel="stylesheet", href="css/libs.css")
+    link(rel="stylesheet", href="css/style.css")
+    style.
+      .wrapper-all-component { overflow: hidden; max-width: 1024px; margin: 0 auto;padding: 0 10px;}
+      .all-components-template {text-transform: uppercase;}
+      .all-components-template li {margin-top: 20px; overflow: hidden}
+      .all-components-template a {font-weight: bold; display: block; text-decoration: none; color: #111; line-height: 1; color: black}
+      .all-components-template a:hover { color: #4F2A81;}
+      .title-all-components {color: #4F2A81;}
+      .title-site { font-size: 40px; color: #4F2A81; margin: 50px 0;}
+      .title-site-small { font-size: 25px; color: #4F2A81;}
+    script(src="js/modernizr.js")
+  body.all-components-template
+    .wrapper-all-component
+      h2.title-site Templates
+      .row
+        .col-sm-12
+          h2.title-all-components 
+          .row
+            .col-sm-4
+              ul
+                li: +link('test', 'test.html')(target="_blank")

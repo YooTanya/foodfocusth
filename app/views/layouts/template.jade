@@ -1,0 +1,33 @@
+include ../mixins/all
+
+block vars
+  -title = 'Template'
+
+doctype html
+html(class="no-js", lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge, chrome=1")
+    title=title
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    meta(name="robots", content="noindex, nofollow")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, minimal-ui")
+    link(rel="icon", href="favicon.ico", type="image/x-icon", sizes="16x16")
+    link(href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900", rel="stylesheet")
+    link(rel="stylesheet", href="css/libs.css")
+    link(rel="stylesheet", href="css/style.css")
+    style.
+      .style-guide {margin: 20px; background: white; font-size: 1rem;}
+      .style-guide h1 {text-align: center; }
+      .style-guide h2.title-styleguide {margin: 20px 0; border-bottom: 1px solid #ccc; font-weight: normal; display: block;  border-bottom: 1px solid black;padding: 10px 0; text-transform: uppercase; color: #389A6E; font-weight:bold}
+      section { overflow: hidden;}
+      .all-icons * { margin: 1rem; font-size: 2rem; float: left; }
+
+    script(src="js/modernizr.js")
+  body.style-guide
+    block container
+    include ../blocks/script
+    //[if lte IE 9]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]
+    noscript JavaScript is off. Please enable to view full site.

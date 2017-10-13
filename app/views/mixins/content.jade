@@ -1,0 +1,7 @@
+mixin centered-content(title, paragraph)
+  - if (typeof(title) === 'undefined') title = 'Our Approach'
+  - if (typeof(paragraph) === 'undefined') title = 'We are ready to lead you to success with a superior ranges of services and exclusive privileges for affluent individuals with at least 50 million baht in deposits and/or investments with SCB.'
+    .description-block.mar-bot.txt-center&attributes(attributes)
+      h2.title.underlined-title.middle.txt-white #{title}
+      .content
+        p.text-mediumer.mar-top We are ready to lead you to success with a superior ranges of services and exclusive privileges for affluent individuals with at least 50 million baht in deposits and/or investments with SCB.

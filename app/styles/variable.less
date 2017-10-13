@@ -1,0 +1,132 @@
+// Typography
+@font-family-base: Tahoma, Helvetica, Arial, sans-serif;
+
+@font-family-medium: 'ErgoMediumCondensed';
+@font-family-bold: 'ErgoCom-DemiCondensed';
+@font-family-normal: 'ErgoComCondensed';
+
+@font-family-medium-th: 'KittithadaMedium65';
+@font-family-bold-th: 'KittithadaMedium65';
+@font-family-normal-th: 'KittithadaLight45';
+
+
+@font-size-base: 13px;
+@font-large: 28px;
+@font-medium: 16px;
+@font-small: 12px;
+
+
+// Color
+@color: #767676;
+@red-color: #ef6f6e;
+@dark-purple-color: #462279;
+@purple-color: #7A58BF;
+@purple-color-2: #8274A2;
+@light-purple-color: #906be0;
+@orange-color: #feac00;
+@light-orange-color: #f6a969;
+@yellow-color: #fed733;
+@grey-color: #dbdbdb;
+@light-grey-color: #767676;
+@light-black: #30373b;
+@gold: #c59f32;
+@light-gold: #e1ba98;
+@lighter-gold: #deb337;
+@olive: #746c56;
+@dark-yellow: #cda889;
+
+@blue-color: #007fbb;
+
+
+@light-green-color: #89df7d;
+@bgcolor: #f9f9fa;
+@text-color: @color;
+@placeholder-color: @color;
+// Link
+@link-color: @color;
+@link-hover-color: @grey-color;
+@link-active-color: @light-grey-color;
+@link-visited-color: @color;
+// Grid System
+@grid: 30px;
+@grid-small: 20px;
+@m-grid: 15px;
+@m-grid-small: 10px;
+
+
+
+@from-desktop-lg:       ~"only screen and (min-width: 1600px)";
+@only-desktop-lg:       ~"only screen and (min-width: 1200px)";
+@desktop-only:          ~"only screen and (min-width: 992px)";
+@tablet-only:           ~"only screen and (min-width: 768px) and (max-width: 1024px)";
+@tablet-portrait-only:  ~"only screen and (min-width: 768px) and (max-width: 991px)";
+@tablet-landscape-only: ~"only screen and (min-width: 992px) and (max-width: 1024px)";
+@tablet-desktop:        ~"only screen and (min-width: 768px)";
+@from-mobile-landscape-up:  ~"only screen and (min-width: 480px)";
+@medium-screen:         ~"only screen and (min-width: 992px) and (max-width: 1160px)";
+
+@from-tablet:           ~"only screen and (max-width: 1024px)";
+@from-tablet-portrait:  ~"only screen and (max-width: 991px)";
+@from-mobile:           ~"only screen and (max-width: 767px)";
+@from-mobile-portrait:  ~"only screen and (max-width: 480px)";
+@from-mobile-375:       ~"only screen and (max-width: 375px)";
+@from-mobile-medium:    ~"only screen and (max-width: 360px)";
+@from-mobile-small:     ~"only screen and (max-width: 320px)";
+
+@screen-xs: 480px;
+@screen-xs-min: @screen-xs;
+@screen-phone: @screen-xs-min;
+@screen-sm: 768px;
+@screen-sm-min: @screen-sm;
+@screen-tablet: @screen-sm-min;
+@screen-md: 992px;
+@screen-md-min: @screen-md;
+@screen-desktop: @screen-md-min;
+@screen-lg: 1200px;
+@screen-lg-min: @screen-lg;
+@screen-lg-desktop: @screen-lg-min;
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+@grid-columns: 12;
+@grid-gutter-width: 30px;
+@grid-float-breakpoint: @screen-sm-min;
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+@grid-tablet: (720px + @grid-gutter-width);
+@grid-sm: @grid-tablet;
+@grid-desktop: (940px + @grid-gutter-width);
+@grid-md: @grid-desktop;
+@grid-large-desktop: (1140px + @grid-gutter-width);
+@grid-lg: @grid-large-desktop;
+
+
+@heightThumb: 360px;
+@heightCalc: "(100vw - 90px)/3";
+@heightCalcBig: "(100vw - 90px)/1.5 + 41px";
+@m-heightCalc: "100vw - 30px";
+@tablet-heightCalc: "100vw - 30px";
+
+
+.calHeight(){
+  @media @medium-screen {
+    /*.calc(height, @heightCalc);*/
+    height: 317px;
+  }
+  @media @tablet-portrait-only {
+    .calc(height, "(100vw - 30px)/2");
+  }
+  @media @from-mobile {
+    .calc(height, @m-heightCalc);
+  }
+}
+
+
+.calHeightOnlyMedium(){
+  @media @medium-screen {
+    .calc(height, @heightCalc);
+  }
+}
+
+.box-shadow-default() {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.07);
+}

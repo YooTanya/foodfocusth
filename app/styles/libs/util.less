@@ -1,0 +1,105 @@
+// Util
+.clearfix {
+  .clearfix();
+}
+.center {
+
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+  visibility: hidden;
+}
+.invisible {
+  visibility: hidden;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-justify {
+  text-align: justify !important;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.bold {
+  font-weight: bold;
+}
+.bolder {
+  font-weight: 800;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.img-responsive {
+  width: 100%;
+}
+[class*='-6'] {
+  > .img-responsive {
+    @media @desktop-only {
+      height: 333px;
+    }
+  }
+}
+.display-block {
+  display: block;
+}
+.display-in-block {
+  display: inline-block;
+}
+.display-table-cell {
+  display: table-cell;
+}
+.pos {
+  position: absolute;
+}
+.wrap-block {
+  overflow: hidden;
+}
+
+.dark-grey { color: #373737}
+.black { color: #000!important}
+
+.list-inline {
+  text-align: center;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: @light-black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: @light-black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: @light-black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: @light-black;
+}
+.transition(@duration) {
+  transition: all @duration;
+  -webkit-transition: all @duration;
+}

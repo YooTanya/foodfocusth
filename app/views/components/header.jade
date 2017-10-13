@@ -1,0 +1,12 @@
+include ../mixins/all
+
+header#header
+  .inner-header
+    .content
+      .hamburger-box.hidden-md-up
+        .hamburger-inner
+      +link-img('images/logo.png', 'SCB', 'index.html').logo.hidden-xs.hidden-sm
+      +link-img('images/logo.png', 'SCB', 'index.html').logo.hidden-md-up
+      .right-header
+        include nav-desktop
+  include nav-mobile

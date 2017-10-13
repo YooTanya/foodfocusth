@@ -1,0 +1,38 @@
+mixin input(name, placeholder, type)
+  - if (typeof(type) === 'undefined') type = 'text'
+  - if (typeof(placeholder) === 'undefined') placeholder = ''
+  input(type=type, name=name, id=name, placeholder=placeholder)&attributes(attributes)
+
+mixin textarea(name, placeholder)
+  - if (typeof(placeholder) === 'undefined') placeholder = ''
+  textarea(name=name, id=name, placeholder=placeholder)&attributes(attributes)
+
+mixin checkbox(name, value)
+  input(type='checkbox', name=name, id=name, value=value)&attributes(attributes)
+
+mixin radio(name, id, value)
+  input(type='radio', name=name, id=id, value=value)&attributes(attributes)
+
+mixin custom-radio(name, id, label, value)
+  label.custom-radio&attributes(attributes)
+    +radio(name, id, value)
+    span
+    !=label
+
+mixin custom-radio-2(name, id, label, value)
+  label.custom-checkbox
+    +radio(name, id, value)
+    span #{label}
+
+mixin custom-checkbox(name, label, value)
+  label.custom-checkbox
+    +checkbox(name, value)
+    span #{label}
+
+mixin button(text, name, type)
+  - if (typeof(type) === 'undefined') type = 'submit'
+  button(type=type, name=name, id=name, title=text)&attributes(attributes)
+    if block
+      block
+    else
+      !=text

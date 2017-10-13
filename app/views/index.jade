@@ -1,0 +1,49 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'homepage'
+
+block container
+  .wrapper.pad-top-min.pad-bot-min(style="background-color: #282929;")
+    .inner-container
+      .row
+        .col-sm-12
+          section.banner-wrap
+            .banner-carousel
+              +img('images/upload/top_1.gif')
+              +img('images/upload/top_2.gif')
+              +img('images/upload/top_3.gif')
+              +img('images/upload/top_4.gif')
+              +img('images/upload/top_5.gif')
+              +img('images/upload/top_6.gif')
+
+  section.banner-wrap
+    +banner-book-image('images/upload/magazine-bg.jpeg','images/upload/book-1.jpg','Welcome To Food Focus Magazine', 'FOOD FOCUS THAILAND MAGAZINE','THE NO.1 INDUSTRY-FOCUSED MAGAZINE FOR FOOD & BEVERAGE PROFESSIONALS','ALCOHOL DRINK')
+  .wrapper.pad-top-lg.pad-bot-lg(style="background-color: #f9f9f9;")
+    .inner-container
+      .row
+        .col-sm-12
+          h2.title.light WHAT'S IN
+        .col-sm-12.col-md-8.mar-top
+          +story('images/upload/thumb-1.jpg','Vietnam Coffee Market','ความต้องการของกาแฟเวียดนามส่งผลให้ประเทศอยู่ในตลาดกาแฟชั้นนำของโลกกำลังเติบโต')
+        .col-sm-6.col-md-4.mar-top
+          +product('images/upload/thumb-2.jpg','เทคนิคใหม่ในการตรวจวิเคราะห์น้ำมันพืช')
+        .col-sm-6.col-md-4.mar-top
+          +product('images/upload/thumb-3.jpg','เทคโนโลยีการถนอมอาหารด้วยความดันสูง')
+        .col-sm-6.col-md-4.mar-top
+          +product('images/upload/thumb-4.jpg','นวัตกรรมชุดทดสอบโปรตีนรวม')
+        .col-sm-6.col-md-4.mar-top
+          +product('images/upload/thumb-5.jpg','คุณรู้จักวิตามินดีแค่ไหน')
+        
+  .wrapper.pad-bot-lg.pad-top-lg(style="background-color: #ffffff;")
+    .inner-container
+      .row
+        .col-sm-12
+          h2.title.light NEWS &amp; ACTIVITIES
+        .col-sm-6.col-md-4.mar-top
+          +news('images/upload/thumb-5.jpg','สสว. สถาบันอาหารนำทัพคลัสเตอร์มะพร้าวเปิดตลาดใหญ่ที่จีน ร่วมออกบูธในงาน FHW CHINA 2017','สสว. สถาบันอาหารนำทัพคลัสเตอร์มะพร้าวเปิดตลาดใหญ่ที่จีน ร่วมออกบูธในงาน FHW CHINA 2017','สสว. สถาบันอาหารนำทัพคลัสเตอร์มะพร้าวเปิดตลาดใหญ่ที่จีน ร่วมออกบูธในงาน FHW CHINA 2017')
+        .col-sm-6.col-md-4.mar-top
+          +news('images/upload/thumb-5.jpg','สสว. สถาบันอาหารนำทัพคลัสเตอร์มะพร้าวเปิดตลาดใหญ่ที่จีน ร่วมออกบูธในงาน FHW CHINA 2017','สสว. สถาบันอาหารนำทัพคลัสเตอร์มะพร้าวเปิดตลาดใหญ่ที่จีน ร่วมออกบูธในงาน FHW CHINA 2017','สสว. สถาบันอาหารนำทัพคลัสเตอร์มะพร้าวเปิดตลาดใหญ่ที่จีน ร่วมออกบูธในงาน FHW CHINA 2017')
+        .col-sm-6.col-md-4.mar-top
+          +news('images/upload/thumb-5.jpg','สสว. สถาบันอาหารนำทัพคลัสเตอร์มะพร้าวเปิดตลาดใหญ่ที่จีน ร่วมออกบูธในงาน FHW CHINA 2017','สสว. สถาบันอาหารนำทัพคลัสเตอร์มะพร้าวเปิดตลาดใหญ่ที่จีน ร่วมออกบูธในงาน FHW CHINA 2017','สสว. สถาบันอาหารนำทัพคลัสเตอร์มะพร้าวเปิดตลาดใหญ่ที่จีน ร่วมออกบูธในงาน FHW CHINA 2017')
