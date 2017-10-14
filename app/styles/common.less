@@ -592,7 +592,6 @@ input::-webkit-contacts-auto-fill-button {
   font-size: @font-medium;
   &:after {
     content: '';
-    .icon-arrow-more();
     opacity: 0;
     vertical-align: middle;
     .transition (all 0.3s);
@@ -608,7 +607,7 @@ input::-webkit-contacts-auto-fill-button {
   &.white {
     color: white!important;
     &:after {
-      .icon-arrow-more-white();
+      
     }
   }
 }
@@ -716,22 +715,6 @@ input::-webkit-contacts-auto-fill-button {
         transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
       }
-    }
-    &.last:after {
-      margin-left: 10px;
-      background: url(../images/icons/last.svg) no-repeat center center;
-    }
-    &.next:after {
-      margin-left: 10px;
-      background: url(../images/icons/next.svg) no-repeat center center;
-    }
-    &.first:before {
-      margin-right: 10px;
-      background: url(../images/icons/last.svg) no-repeat center center;
-    }
-    &.prev:before {
-      margin-right: 10px;
-      background: url(../images/icons/next.svg) no-repeat center center;
     }
     .transition(all 0.3s);
 
