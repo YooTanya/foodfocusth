@@ -334,27 +334,22 @@
     border-bottom: 1px solid rgba(0,0,0,0.1);
   }
   a {
-    &:extend(.txt-purple);
+    color: black;
     overflow: hidden;
     font-size: @font-medium;
     line-height: 22px;
-    .transition(0.3s);
-    height: 61px;
+    height: 75px;
     display: table;
     width: 100%;
     vertical-align: middle;
 
     .no-touch.desktop & {
       &:hover {
-        background-color: @purple-color;
-        color: white;
-        padding-left: @grid-small;
+        color: @blue-color;
       }
     }
     &:active {
-      background: @purple-color;
-      color: white;
-      padding-left: @grid-small;
+      color: @blue-color;
     }
     span {
       display: table-cell;
@@ -592,7 +587,6 @@ input::-webkit-contacts-auto-fill-button {
   font-size: @font-medium;
   &:after {
     content: '';
-    .icon-arrow-more();
     opacity: 0;
     vertical-align: middle;
     .transition (all 0.3s);
@@ -607,9 +601,6 @@ input::-webkit-contacts-auto-fill-button {
   }
   &.white {
     color: white!important;
-    &:after {
-      .icon-arrow-more-white();
-    }
   }
 }
 

@@ -751,7 +751,6 @@ table {
 .story {
   overflow: hidden;
   position: relative;
-  border-radius: 4px;
   -webkit-transform: translate3d(0,0,0);
   .box-shadow-default();
   @media @only-desktop-lg {
@@ -764,19 +763,12 @@ table {
     background-repeat: no-repeat;
     display: block;
     .size(100%);
-    .transition(1s);
-    -webkit-transform: translate3d(0,0,0);
     position: relative;
     z-index: 2;
   }
   .no-touch.desktop & {
     &:hover {
-      border-radius: 4px;
       box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.13);
-      .story-thumb {
-        transform: translate3d(0,0,0) rotate(2deg) scale(1.1);
-        -webkit-transform: translate3d(0,0,0) rotate(2deg) scale(1.1);
-      }
     }
   }
   .story-info {
