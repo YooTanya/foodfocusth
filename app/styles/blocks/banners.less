@@ -191,35 +191,3 @@
     }
   }
 }
-
-.banner-carousel {
-  .middle-block > *, .slick-dots{
-    opacity: 0;
-    transform: translateY(200px);
-    transition: all 0.5s;
-  }
-  .content {
-    transition: all 0.55s;
-  }
-  .button-group {
-    transition: all 0.6s;
-  }
-  .slick-dots {
-    transition: all 0.65s;
-  }
-  .item {
-    display: none;
-    &.slick-active {
-      display: block;
-    }
-  }
-  .loaded & {
-    .item {
-      display: block;
-    }
-    .middle-block > * , .slick-dots{
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}

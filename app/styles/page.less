@@ -9,7 +9,6 @@
 }
 
 .life-stage {
-  background-color: #ffffff;
   padding: 25px 0;
   border-radius: 4px;
   .box-shadow-default();
@@ -35,9 +34,6 @@
     }
     .text {
       font: @font-medium @font-family-medium;
-      [lang="th"] & {
-        font-family: @font-family-medium-th;
-      }
       color: black;
       display: block;
       margin-top: 10px;
@@ -558,7 +554,6 @@
     float: left;
     width: 50%;
   }
-  /*.calHeightOnlyMedium();*/
   @media @medium-screen {
     height: 317px;
   }
@@ -1013,9 +1008,9 @@ table {
         a {
           color: black;
           &.active {
-            &:extend(.txt-purple);
+            &:extend(.txt-blue);
             padding-bottom: 3px;
-            border-bottom: 2px solid @purple-color;
+            border-bottom: 2px solid @blue-color;
           }
 
           &:after {
@@ -1023,7 +1018,7 @@ table {
           }
           .no-touch.desktop & {
             &:hover {
-              &:extend(.txt-purple);
+              &:extend(.txt-blue);
             }
           }
         }

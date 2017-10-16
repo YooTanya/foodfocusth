@@ -3,62 +3,52 @@ include ../mixins/all
 nav.global-nav.hidden-xs.hidden-sm
   ul
     li
-      +link('Home').current
-    li
+      +link('Home')
+    li.has-sub
       +link('About Us').link-sub
       .mega-menu
         .menu-wrap
           .inner-menu
             .level-1
               ul
-                li: +link('Loans','#tab-loans').active
-                li: +link('Cards','#tab-cards')
-                li: +link('Deposits','#tab-deposits')
-                li: +link('Insurance','#tab-insurance')
-                li: +link('Investment','#tab-investment')
-                li: +link('Payment','#tab-payment')
-                li: +link('Other Services','#tab-services')
-    li
-      +link('Magazine')
+                li: +link('About Company')
+                li: +link('Endorsement')
+                li: +link('Board of Consultants')
+                li: +link('Advertisement')
+    li.has-sub
+      +link('Magazine').link-sub
       .mega-menu
         .menu-wrap
           .inner-menu
             .level-1
               ul
-                li: +link('Loans','#tab-loans').active
-                li: +link('Cards','#tab-cards')
-                li: +link('Deposits','#tab-deposits')
-                li: +link('Insurance','#tab-insurance')
-                li: +link('Investment','#tab-investment')
-                li: +link('Payment','#tab-payment')
-                li: +link('Other Services','#tab-services')
-    li 
-      +link('Events')
+                li: +link('Food Focus Thailand Magazine')
+                li: +link('Special Supplement')
+                li: +link('Food Focus Roadmap')
+                li: +link('Food Focus Roadshow')
+                li: +link('Seminar & Conference')
+                li: +link('Exhibition')
+    li.has-sub
+      +link('Events').link-sub
       .mega-menu
         .menu-wrap
           .inner-menu
             .level-1
               ul
-                li: +link('Loans','#tab-loans').active
-                li: +link('Cards','#tab-cards')
-                li: +link('Deposits','#tab-deposits')
-                li: +link('Insurance','#tab-insurance')
-                li: +link('Investment','#tab-investment')
-                li: +link('Payment','#tab-payment')
-                li: +link('Other Services','#tab-services')
-    li 
-      +link('Services')
-      .mega-menu
+                li: +link('Food Focus Roadmap')
+                li: +link('Food Focus Roadshow')
+                li: +link('Seminar & Conference')
+                li: +link('Exhibition')
+    li.has-sub
+      +link('Services').link-sub
+      .mega-menu.image
         .menu-wrap
           .inner-menu
-            .level-1
+            .level-1.life-stage
               ul
-                li: +link('Loans','#tab-loans').active
-                li: +link('Cards','#tab-cards')
-                li: +link('Deposits','#tab-deposits')
-                li: +link('Insurance','#tab-insurance')
-                li: +link('Investment','#tab-investment')
-                li: +link('Payment','#tab-payment')
-                li: +link('Other Services','#tab-services')
+                li: +life-stage('images/icons/ic-search.svg','Contract Publication')
+                li: +life-stage('images/icons/ic-search.svg','Anniversary & Annual Report')
+                li: +life-stage('images/icons/ic-search.svg','Company Profile & Product Catalogue')
+                li: +life-stage('images/icons/ic-search.svg','Event Organizer')
     li: +link('Contact Us')
 

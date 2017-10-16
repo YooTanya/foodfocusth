@@ -254,14 +254,8 @@
 .txt-light-grey {
   color: #adadad;
 }
-.txt-purple {
-  color: @purple-color;
-}
-.background-purple {
-  background: @purple-color;
-}
-.txt-light-purple {
-  color: #b697ff;
+.txt-blue {
+  color: @blue-color;
 }
 .txt-green {
   color: @light-green-color;
@@ -586,157 +580,6 @@ input::-webkit-contacts-auto-fill-button {
   }
 }
 
-.link-primary {
-  color: @purple-color!important;
-  font-size: @font-medium;
-  &:after {
-    content: '';
-    opacity: 0;
-    vertical-align: middle;
-    .transition (all 0.3s);
-  }
-  .no-touch.desktop & {
-    &:hover {
-      &:after {
-        opacity: 1;
-        margin-left: 10px;
-      }
-    }
-  }
-  &.white {
-    color: white!important;
-  }
-}
-
-
-.link-default {
-  &:extend(.txt-purple);
-  font-size: @font-medium;
-
-  .no-touch.desktop & {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  &:active {
-    text-decoration: underline;
-  }
-  &.disabled {
-    color: #898989;
-    opacity: 0.2;
-    cursor: default;
-    .no-touch.desktop & {
-      &:hover {
-        text-decoration: none;
-      }
-    }
-    &:active {
-      text-decoration: underline;
-    }
-  }
-}
-
-.point {
-  z-index: 1;
-  height: 27px;
-  border-radius: 100px;
-  background-color: #f6a969;
-  width: 100px;
-  position: absolute;
-  top: @m-grid;
-  right: @m-grid;
-
-  .point-text {
-    padding-top: 0.5em;
-    text-align: center;
-    vertical-align: middle;
-    color: white;
-    &:after {
-      content: ' pts';
-    }
-  }
-
-  &.corner {
-    position: absolute;
-    top: @m-grid;
-    right: @m-grid;
-  }
-}
-.suggested {
-  text-transform: uppercase;
-  padding: 13px @m-grid 10px;
-  font: @font-small @font-family-medium;
-  [lang="th"] & {
-    font-family: @font-family-medium-th;
-  }
-  letter-spacing: 2px;
-  color: white;
-  background: @purple-color;
-  display: block;
-  position: absolute;
-  top:0;
-  left: 0;
-}
-.paging {
-  text-align: center;
-  overflow: hidden;
-  ul, li, a {
-    display: inline-block;
-    font-size: 15px;
-  }
-  a {
-    line-height: 32px;
-    padding: 0 12px;
-    color: rgba(255,255,255,0.7);
-    vertical-align: middle;
-    &.first {
-      border-left: none;
-    }
-    &.last, &.next{
-      &:after {
-        content: '';
-        background-size: 100%;
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-      }
-    }
-    &.first, &.prev{
-      &:before {
-        content: '';
-        background-size: 100%;
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-      }
-    }
-    .transition(all 0.3s);
-
-    &.disable {
-      cursor: default;
-    }
-    &:not(.disable):hover, &.selected{
-      color: white;
-      &:before, &:after {
-        animation: wobble-horizontal 1s ease-in-out;
-      }
-    }
-
-    @media @from-mobile {
-      &.prev, &.next {
-        font-size: 0;
-        &:before,
-        &:after {
-          margin-right: 0;
-          margin-left: 0;
-          margin-top: 19px;
-        }
-      }
-    }
-  }
-}
 .tab-header {
   .clearfix();
   padding: 30px 0 10px;
@@ -758,60 +601,13 @@ input::-webkit-contacts-auto-fill-button {
       font-family: @font-family-medium-th;
     }
     &.active {
-      &:extend(.txt-purple);
+      &:extend(.txt-blue);
       padding-bottom: 3px;
-      border-bottom: 2px solid @purple-color;
+      border-bottom: 2px solid @blue-color;
     }
     .no-touch.desktop & {
       &:hover {
-        &:extend(.txt-purple);
-      }
-    }
-  }
-}
-
-.tooltip {
-  display: block;
-  padding: 0 5px;
-  position: absolute;
-  text-align: center;
-  min-width: 124px;
-  padding: 8px 10px;
-  background: #30373b;
-  border-radius: 3px;
-  color: #f2f2f2;
-  line-height: normal;
-  &:before {
-    content: " ";
-    position: absolute;
-    width: 0;
-    border-bottom: 5px solid #30373b;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-  }
-}
-
-.limited {
-  max-width: 800px;
-}
-.list-column {
-  margin: 0 -@m-grid;
-  overflow: hidden;
-  .col {
-    float: left;
-    margin: @grid @m-grid 0;
-  }
-  @media @from-mobile {
-    .col {
-      float: none;
-      .gender {
-        margin: 0 auto;
-      }
-    }
-    &.left {
-      .col {
-        float: left;
-        margin: 0 0 0 15px;
+        &:extend(.txt-blue);
       }
     }
   }

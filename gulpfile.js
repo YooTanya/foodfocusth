@@ -135,18 +135,7 @@ gulp.task('l10n', function(){
     .pipe(copy())
     .pipe(gulp.dest(config.build + '/js'))
 });
-// copy config
 
-gulp.task('config', function(){
-  return gulp.src(config.scripts +'config.js')
-    .pipe(copy())
-    .pipe(gulp.dest(config.build + '/js'))
-});
-gulp.task('chart', function(){
-  return gulp.src(config.scripts +'chart.js')
-    .pipe(copy())
-    .pipe(gulp.dest(config.build + '/js'))
-});
 // css
 gulp.task('less:styles', function () {
   return gulp.src(config.styles + '/style.less')
@@ -174,7 +163,7 @@ gulp.task('watch', function(){
 
 
 //concat
-gulp.task('concat', ['js:lint', 'js:script', 'js:libs','l10n', 'config','chart']);
+gulp.task('concat', ['js:lint', 'js:script', 'js:libs','l10n']);
 // css
 gulp.task('css', ['less:libs', 'less:styles', 'csslint']);
 // copy
