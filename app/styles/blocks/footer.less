@@ -16,10 +16,15 @@
   }
 
   .social-icons {
+    text-align: right;
+    @media @from-mobile-portrait {
+      text-align: left;
+      margin-top: @m-grid;
+    }
     li {
-      float: right;
+      display: inline-block;
       &:not(:last-child) {
-        margin-left: @m-grid;
+        margin-right: @m-grid;
       }
     }
     img {
@@ -29,13 +34,22 @@
   }
 
   .address {
-    clear: both;
-    display: block;
+    width: 70%;
+    margin-left: 30%;
     p {
       text-align: right;
-      width: 70%;
-      margin-left: 30%;
     }
+    @media @from-tablet-portrait {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    @media @from-mobile-portrait {
+      p {
+        text-align: left;
+      }
+    }
+    
   }
   .inner {
     padding: 0.5em 2em 0;
@@ -46,10 +60,8 @@
     }
   }
   .row {
-    @media @desktop-only {
-      margin-top: @grid;
-      margin-bottom: @grid;
-    }
+    margin-top: @grid;
+    margin-bottom: @grid;
   }
   .bottom-footer {
     background: black;
