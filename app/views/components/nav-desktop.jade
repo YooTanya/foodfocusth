@@ -2,333 +2,63 @@ include ../mixins/all
 
 nav.global-nav.hidden-xs.hidden-sm
   ul
-    li.has-sub
-      +link('Home').link-sub.current
+    li
+      +link('Home').current
+    li
+      +link('About Us').link-sub
       .mega-menu
         .menu-wrap
           .inner-menu
             .level-1
               ul
-                li: +link-thumb('images/icons/ic-loans.svg','Loans','#tab-loans').active
-                li: +link-thumb('images/icons/ic-cards.svg','Cards','#tab-cards')
-                li: +link-thumb('images/icons/ic-deposit.svg','Deposits','#tab-deposits')
-                li: +link-thumb('images/icons/ic-insurance.svg','Insurance','#tab-insurance')
-                li: +link-thumb('images/icons/ic-investment.svg','Investment','#tab-investment')
-                li: +link-thumb('images/icons/ic-payment.svg','Payment','#tab-payment')
-                li: +link-thumb('images/icons/ic-other.svg','Other Services','#tab-services')
-            .level-2
-              .inner#tab-loans.active
-                .row
-                  .col-md-7.col-lg-8
-                    .row
-                      .col-sm-12
-                        +link('Browse All Loans').link-view-all
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 I WANT A
-                          ul
-                            li: +link('Personal Loan','loan-landing.html')
-                            li: +link('Home Loan','loan-homepage.html')
-                            li: +link('Car Loan')
-                      .col-sm-6
-                        .item.bigger
-                          h3 Help me to
-                          ul
-                            li: +link('Buy my first home')
-                            li: +link('Renovate my home')
-                            li: +link('Buy a car')
-                            li: +link('Borrow some money')
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 QUICK LINKS
-                          ul
-                            li: +link('Calculators and tools')
-                            li: +link('Repay my loans')
-                      .col-sm-6
-                        .item.link-promotion.bigger
-                          +link('View promotions')
-                            span View promotions
-                            span.promotion-no 12
-                  .col-md-5.col-lg-4
-                    +link().thumb-default.mar-top-sm
-                      figure
-                        .thumb(style="background-image:url('images/upload/thumb-1.jpg')")
-                      figcaption
-                        h3 Buy your first home?
-                        .desc
-                          p It’s time to think about finance and other considerations that come with owning a home.
-                        span.link-primary Read more
-              .inner#tab-cards
-                .row
-                  .col-md-7.col-lg-8
-                    .row
-                      .col-sm-12
-                        +link('Browse All Cards').link-view-all
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 I WANT A
-                          ul
-                            li: +link('Personal Loan')
-                            li: +link('Home Loan')
-                            li: +link('Car Loan')
-                      .col-sm-6
-                        .item.bigger
-                          h3 Help me to
-                          ul
-                            li: +link('Buy my first home')
-                            li: +link('Renovate my home')
-                            li: +link('Buy a car')
-                            li: +link('Borrow some money')
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 QUICK LINKS
-                          ul
-                            li: +link('Report a lost card')
-                            li: +link('Activate my new card')
-                            li: +link('Forgotten my PIN')
-                      .col-sm-6
-                        .item.link-promotion.bigger
-                          ul
-                            li
-                              +link('Calculators and tools')
-                            li
-                              +link('View promotions')
-                                span View promotions
-                                span.promotion-no 12
-                            li
-                              +link('Rewards and redemption')
-                                span Rewards and redemption
-                                span.promotion-no 22
-                  .col-md-5.col-lg-4
-                    +link().thumb-default.mar-top-sm
-                      figure
-                        +link('Buy your first home?','#','').thumb(style="background-image:url('images/upload/thumb-1.jpg')")
-                      figcaption
-                        h3 Buy your first home?
-                        .desc
-                          p It’s time to think about finance and other considerations that come with owning a home.
-                        +link('Read more').link-primary
-              .inner#tab-deposits
-                .row
-                  .col-md-7.col-lg-8
-                    .row
-                      .col-sm-12
-                        +link('Browse All Deposits').link-view-all
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 I WANT A
-                          ul
-                            li: +link('Personal Loan')
-                            li: +link('Home Loan')
-                            li: +link('Car Loan')
-                      .col-sm-6
-                        .item.bigger
-                          h3 Help me to
-                          ul
-                            li: +link('Buy my first home')
-                            li: +link('Renovate my home')
-                            li: +link('Buy a car')
-                            li: +link('Borrow some money')
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 QUICK LINKS
-                          ul
-                            li: +link('Calculators and tools')
-                            li: +link('Repay my loans')
-                      .col-sm-6
-                        .item.link-promotion.bigger
-                          +link('View promotions')
-                            span View promotions
-                            span.promotion-no 12
-                  .col-md-5.col-lg-4
-                    +link().thumb-default.mar-top-sm
-                      figure
-                        +link('Buy your first home?','#','').thumb(style="background-image:url('images/upload/thumb-1.jpg')")
-                      figcaption
-                        h3 Buy your first home?
-                        .desc
-                          p It’s time to think about finance and other considerations that come with owning a home.
-                        +link('Read more').link-primary
-              .inner#tab-insurance
-                .row
-                  .col-md-7.col-lg-8
-                    .row
-                      .col-sm-12
-                        +link('Browse All Insurance').link-view-all
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 I WANT A
-                          ul
-                            li: +link('Personal Loan')
-                            li: +link('Home Loan')
-                            li: +link('Car Loan')
-                      .col-sm-6
-                        .item.bigger
-                          h3 HELP ME TO
-                          ul
-                            li: +link('Buy my first home')
-                            li: +link('Renovate my home')
-                            li: +link('Buy a car')
-                            li: +link('Borrow some money')
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 QUICK LINKS
-                          ul
-                            li: +link('Calculators and tools')
-                            li: +link('Repay my loans')
-                      .col-sm-6
-                        .item.link-promotion.bigger
-                          +link('View promotions')
-                            span View promotions
-                            span.promotion-no 12
-                  .col-md-5.col-lg-4
-                    +link().thumb-default.mar-top-sm
-                      figure
-                        +link('Buy your first home?','#','').thumb(style="background-image:url('images/upload/thumb-1.jpg')")
-                      figcaption
-                        h3 Buy your first home?
-                        .desc
-                          p It’s time to think about finance and other considerations that come with owning a home.
-                        +link('Read more').link-primary
-              .inner#tab-investment
-                .row
-                  .col-md-7.col-lg-8
-                    .row
-                      .col-sm-12
-                        +link('Browse All Investment').link-view-all
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 I WANT A
-                          ul
-                            li: +link('Personal Loan')
-                            li: +link('Home Loan')
-                            li: +link('Car Loan')
-                            li: +link('Long term equity fund')
-                      .col-sm-6
-                        .item.bigger
-                          h3 HELP ME TO
-                          ul
-                            li: +link('Buy my first home')
-                            li: +link('Renovate my home')
-                            li: +link('Buy a car')
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 QUICK LINKS
-                          ul
-                            li: +link('Calculators and tools')
-                            li: +link('Repay my loans')
-                      .col-sm-6
-                        .item.link-promotion.bigger
-                          +link('Calculators and tools')
-                  .col-md-5.col-lg-4
-                    +link().thumb-default.mar-top-sm
-                      figure
-                        +link('Buy your first home?','#','').thumb(style="background-image:url('images/upload/thumb-1.jpg')")
-                      figcaption
-                        h3 Buy your first home?
-                        .desc
-                          p It’s time to think about finance and other considerations that come with owning a home.
-                        +link('Read more').link-primary
-              .inner#tab-payment
-                .row
-                  .col-md-7.col-lg-8
-                    .row
-                      .col-sm-12
-                        +link('Browse All Payment').link-view-all
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 I WANT A
-                          ul
-                            li: +link('Personal Loan')
-                            li: +link('Home Loan')
-                            li: +link('Car Loan')
-                      .col-sm-6
-                        .item.bigger
-                          h3 HELP ME TO
-                          ul
-                            li: +link('Buy my first home')
-                            li: +link('Renovate my home')
-                            li: +link('Buy a car')
-                            li: +link('Borrow some money')
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 QUICK LINKS
-                          ul
-                            li: +link('Calculators and tools')
-                            li: +link('Repay my loans')
-                      .col-sm-6
-                        .item.bigger
-                          +link('View promotions').link-promotion
-                            span View promotions
-                            span.promotion-no 12
-                  .col-md-5.col-lg-4
-                    +link().thumb-default.mar-top-sm
-                      figure
-                        +link('Buy your first home?','#','').thumb(style="background-image:url('images/upload/thumb-1.jpg')")
-                      figcaption
-                        h3 Buy your first home?
-                        .desc
-                          p It’s time to think about finance and other considerations that come with owning a home.
-                        +link('Read more').link-primary
-              .inner#tab-services
-                .row
-                  .col-md-7.col-lg-8
-                    .row
-                      .col-sm-12
-                        +link('Browse All Other Services').link-view-all
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 I WANT A
-                          ul
-                            li: +link('Personal Loan')
-                            li: +link('Home Loan')
-                            li: +link('Car Loan')
-                      .col-sm-6
-                        .item.bigger
-                          h3 HELP ME TO
-                          ul
-                            li: +link('Buy my first home')
-                            li: +link('Renovate my home')
-                            li: +link('Buy a car')
-                            li: +link('Borrow some money')
-                    .row
-                      .col-sm-6
-                        .item.bigger
-                          h3 QUICK LINKS
-                          ul
-                            li: +link('Calculators and tools')
-                            li: +link('Repay my loans')
-                      .col-sm-6
-                        .item.bigger
-                          +link('View promotions').link-promotion
-                            span View promotions
-                            span.promotion-no 12
-                  .col-md-5.col-lg-4
-                    +link().thumb-default.mar-top-sm
-                      figure
-                        +link('Buy your first home?','#','').thumb(style="background-image:url('images/upload/thumb-1.jpg')")
-                      figcaption
-                        h3 Buy your first home?
-                        .desc
-                          p It’s time to think about finance and other considerations that come with owning a home.
-                        +link('Read more').link-primary
-    li: +link('About Us')
-    li: +link('Magazine')
-    li: +link('Events')
-    li: +link('Services')
+                li: +link('Loans','#tab-loans').active
+                li: +link('Cards','#tab-cards')
+                li: +link('Deposits','#tab-deposits')
+                li: +link('Insurance','#tab-insurance')
+                li: +link('Investment','#tab-investment')
+                li: +link('Payment','#tab-payment')
+                li: +link('Other Services','#tab-services')
+    li
+      +link('Magazine')
+      .mega-menu
+        .menu-wrap
+          .inner-menu
+            .level-1
+              ul
+                li: +link('Loans','#tab-loans').active
+                li: +link('Cards','#tab-cards')
+                li: +link('Deposits','#tab-deposits')
+                li: +link('Insurance','#tab-insurance')
+                li: +link('Investment','#tab-investment')
+                li: +link('Payment','#tab-payment')
+                li: +link('Other Services','#tab-services')
+    li 
+      +link('Events')
+      .mega-menu
+        .menu-wrap
+          .inner-menu
+            .level-1
+              ul
+                li: +link('Loans','#tab-loans').active
+                li: +link('Cards','#tab-cards')
+                li: +link('Deposits','#tab-deposits')
+                li: +link('Insurance','#tab-insurance')
+                li: +link('Investment','#tab-investment')
+                li: +link('Payment','#tab-payment')
+                li: +link('Other Services','#tab-services')
+    li 
+      +link('Services')
+      .mega-menu
+        .menu-wrap
+          .inner-menu
+            .level-1
+              ul
+                li: +link('Loans','#tab-loans').active
+                li: +link('Cards','#tab-cards')
+                li: +link('Deposits','#tab-deposits')
+                li: +link('Insurance','#tab-insurance')
+                li: +link('Investment','#tab-investment')
+                li: +link('Payment','#tab-payment')
+                li: +link('Other Services','#tab-services')
     li: +link('Contact Us')
-
 

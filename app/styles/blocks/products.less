@@ -16,20 +16,10 @@
     }
   }
   figcaption {
-    color: @color;
-    font-size: @font-medium;
-    line-height: 1.5;
-    .margin(@grid, @grid-small);
-    .mega-menu & {
-      h3 {
-        color: black;
-        font-size: 1.69rem;
-      }
+    margin: @grid @grid-small;
+    @media @from-tablet {
+      margin: @m-grid;
     }
-  }
-  .desc {
-    padding: @grid-small 0;
-
   }
   .no-touch.desktop & {
     &:hover{
@@ -39,9 +29,16 @@
 }
 
 .product {
+  @media @only-desktop-lg {
+    height: @heightThumb!important;
+  }
+  .calHeight();
   figure {
     position: relative;
     height: 240px;
+    @media @from-mobile-small {
+      height: 70%;
+    }
   }
   figcaption {
     height: 80px;
@@ -84,7 +81,8 @@
     background-position: center center;
   }
   
-  .desc {
+  .caption {
+    display: table;
     position: absolute;
     bottom: 0;
     left: 0;

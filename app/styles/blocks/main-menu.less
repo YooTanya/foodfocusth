@@ -7,16 +7,16 @@
 }
 
 .global-nav {
-  float: left;
   font-size: 16px;
   padding-left: @grid;
   padding-top: 14px;
-
-
+  ul {
+    float: right;
+  }
   li {
-    float: left;
     padding-right: @grid;
     padding-bottom: @grid;
+    display: inline-block;
     a {
       color: black;
       font-size: 1em;
@@ -43,27 +43,9 @@
       }
     }
   }
-
-  &.corporate {
-    li {
-      a {
-        .no-touch.desktop & {
-          &:hover {
-            color: #8174a2;
-          }
-        }
-        &:active,
-        &.current {
-          color: #8174a2;
-          padding-bottom: 29px;
-          border-bottom: 2px solid #8174a2;
-          &:hover {
-            color: #8174a2;
-          }
-        }
-      }
-    }
-  }
+}
+.search-block.small {
+  float: right;
 }
 .menu-opening {
   overflow: hidden;
@@ -254,53 +236,6 @@
     margin-left: @grid-small;
     display: inline-block!important;
   }
-}
-.icon-loans {
-  background-image: url(../images/icons/ic-loans.svg);
-}
-.icon-cards {
-  background-image: url(../images/icons/ic-cards.svg);
-}
-.icon-deposits {
-  background-image: url(../images/icons/ic-deposit.svg);
-}
-.icon-insurance {
-  background-image: url(../images/icons/ic-insurance.svg);
-}
-.icon-investment {
-  background-image: url(../images/icons/ic-investment.svg);
-}
-.icon-payment {
-  background-image: url(../images/icons/ic-payment.svg);
-}
-.icon-services {
-  background-image: url(../images/icons/ic-other.svg);
-}
-
-.icon-trade-remittance {
-  background-image: url(../images/icons/ic-trade-remittance.svg);
-  background-size: 25px;
-}
-.icon-management-treasury {
-  background-image: url(../images/icons/ic-management-treasury.svg);
-  background-size: 28px;
-}
-.icon-digital-services {
-  background-image: url(../images/icons/ic-digital-services.svg);
-  background-size: 28px;
-}
-.icon-trust {
-  background-image: url(../images/icons/ic-trust-white.svg);
-  background-size: 22px;
-  background-position: 3px center!important;
-}
-.icon-risk-management {
-  background-image: url(../images/icons/ic-risk-management-white.svg);
-  background-size: 25px;
-}
-.icon-financing-lending {
-  background-image: url(../images/icons/ic-financing-lending.svg);
-  background-size: 37px;
 }
 
 .hamburger-box {
@@ -519,18 +454,6 @@
           padding-right: 15px;
         }
 
-      }
-      .right-header {
-        .language {
-          li {
-            padding-right: 5px;
-            padding-left: 5px;
-          }
-        }
-        .icons {
-          margin: 12px 15px 0 7px;
-          font-size: 21px;
-        }
       }
     }
     .global-nav {

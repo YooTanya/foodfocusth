@@ -8,5 +8,11 @@ header#header
       +link-img('images/logo.png', 'SCB', 'index.html').logo.hidden-xs.hidden-sm
       +link-img('images/logo.png', 'SCB', 'index.html').logo.hidden-md-up
       .right-header
+        section.search-block.small
+          form(action="#" method="get" name="search-form" id="search-form")
+            +link-img('images/icons/ic-search.svg')
+            .search-input
+              +input('search-input','Search...')
         include nav-desktop
+        
   include nav-mobile

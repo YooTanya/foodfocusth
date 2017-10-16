@@ -70,9 +70,9 @@
 }
 .title-3 {
   color: black;
-  font: bold 20px/34px @font-family-bold;
+  font: bold 20px/24px @font-family-bold;
   @media @from-mobile {
-    line-height: 1.7;
+    line-height: 1.3;
   }
   &.light {
     font-weight: lighter;
@@ -293,6 +293,10 @@
 .text-mediumer {
   font-size: 20px;
   line-height: 1.9;
+
+  @media @from-tablet {
+    line-height: 1.3;
+  }
 }
 .text-medium {
   font-size: @font-medium;
@@ -707,22 +711,6 @@ input::-webkit-contacts-auto-fill-button {
         transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
       }
-    }
-    &.last:after {
-      margin-left: 10px;
-      background: url(../images/icons/last.svg) no-repeat center center;
-    }
-    &.next:after {
-      margin-left: 10px;
-      background: url(../images/icons/next.svg) no-repeat center center;
-    }
-    &.first:before {
-      margin-right: 10px;
-      background: url(../images/icons/last.svg) no-repeat center center;
-    }
-    &.prev:before {
-      margin-right: 10px;
-      background: url(../images/icons/next.svg) no-repeat center center;
     }
     .transition(all 0.3s);
 
