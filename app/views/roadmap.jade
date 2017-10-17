@@ -1,0 +1,43 @@
+extends layouts/layout
+
+block vars
+  -title = 'Roadmap'
+  -bodyClass = ''
+
+
+block container
+  section.banner-wrap
+    +banner()
+  .wrapper.pad-bot-lg
+    .inner-container
+      .row-centered
+        .col-sm-12
+          section(data-tab)
+            ul.center(data-tab-header)
+              li: +link('2017','#2017').active.title-primary.light
+              li: +link('2016','#2016').title-primary.light
+              li: +link('2015','#2015').title-primary.light
+              li: +link('2014','#2014').title-primary.light
+            section(data-tab-content)
+              .inner#2017.active
+                +roadmap()
+                +roadmap()
+                +roadmap()
+                +roadmap()
+              .inner#2016
+                +roadmap('images/upload/thumb-2.jpg')
+                +roadmap('images/upload/thumb-2.jpg')
+                +roadmap('images/upload/thumb-2.jpg')
+                +roadmap('images/upload/thumb-2.jpg')
+              .inner#2015
+                +roadmap()
+                +roadmap()
+                +roadmap()
+                +roadmap()
+              .inner#2014
+                +roadmap('images/upload/thumb-2.jpg')
+                +roadmap('images/upload/thumb-2.jpg')
+                +roadmap('images/upload/thumb-2.jpg')
+                +roadmap('images/upload/thumb-2.jpg')
+
+                    

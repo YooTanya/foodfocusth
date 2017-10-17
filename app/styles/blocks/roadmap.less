@@ -1,0 +1,62 @@
+
+.row-centered {
+  text-align: center;
+}
+
+.roadmap {
+  width: 360px;
+  display: inline-block;
+  margin: @grid 3rem;
+  @media @from-mobile-375 {
+    width: 320px;
+  }
+  @media @from-tablet-portrait {
+    margin: @m-grid 0;
+  }
+
+  @media @from-mobile-small {
+    width: 240px;
+  }
+  .no-touch.desktop & {
+    &:hover{
+      .image {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      }
+      .caption {
+        h2 {
+          color: @blue-color;
+        }
+      }
+    }
+  }
+  .image {
+    display: block;
+    height: 317px;
+
+    .box-shadow-default();
+    @media @only-desktop-lg {
+      height: @heightThumb!important;
+    }
+    
+    @media @from-mobile-small {
+      .calc(height, "100vw - 120px");
+    }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .caption {
+    background: transparent;
+    padding: 25px 0;
+    text-align: left;
+    max-height: 100px;
+
+    h2 {
+      color: black;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

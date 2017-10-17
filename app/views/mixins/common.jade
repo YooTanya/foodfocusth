@@ -1,3 +1,15 @@
+mixin banner(src, title, content)
+  - if (typeof(src) === 'undefined') src = 'images/upload/magazine-bg.jpeg'
+  - if (typeof(title) === 'undefined') title = 'FOOD FOCUS ROADMAP'
+  - if (typeof(content) === 'undefined') content = 'อริยสงฆ์ทรู สะบึม น็อคฮัลโลวีนโพลล์ไวอากร้ามาราธอน โฮมเมจิกคอนโด เปปเปอร์มินต์ คลิปผ้าห่มไนท์อีโรติก พลาซ่า อึมครึมทาวน์เฮาส์สัมนา จตุคามธุรกรรมโอเพ่น ม้าหินอ่อนความหมายตรวจทาน แรงใจฮิปโปผู้นำ ไคลแม็กซ์กุมภาพันธ์บอยคอตรีโมต โหงวเฮ้งเอ็นทรานซ์ สกรัมตุ๊ดเช็กจิ๊กซาดิสต์ เพียบแปร้แคมป์กราวนด์ลิมูซีน มอนสเตอร์'
+    section.item.medium
+      .thumb(style="background-image: url("+src+");")
+      .caption
+        .inner-container
+          .middle-block
+            h2.intro.txt-white #{title}
+            p.content.txt-white #{content}
+
 mixin banner-book-image(src, book, subtitle, title, content, issue)
   - if (typeof(src) === 'undefined') src = 'images/upload/magazine-bg.jpeg'
   - if (typeof(book) === 'undefined') book = 'images/upload/book-1.jpg'
@@ -26,7 +38,7 @@ mixin story(src, title, content)
   - if (typeof(src) === 'undefined') src = 'images/upload/photo-md-15.jpg'
   - if (typeof(title) === 'undefined') title = 'Opportunities In Volatile Markets'
   - if (typeof(content) === 'undefined') content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempo.'
-    +link().story&attributes(attributes)
+    +link().story
       .thumb(style="background-image: url("+src+");")
       .caption
         .desc
@@ -43,16 +55,12 @@ mixin product(src, title)
       figcaption
         h3.title-3.txt-black #{title}
 
-mixin news(src, news1, news2, news3)
-  - if (typeof(src) === 'undefined') src = 'images/upload/thumb-4.jpg'
-  - if (typeof(title) === 'undefined') title = 'Your Personal Needs'
-    .news-thumb&attributes(attributes)
-      .inner
-        .thumb(style="background-image: url("+src+")")
-        .news-info
-          .item
-            p.text-medium #{news1}
-          .item
-            p.text-medium #{news2}
-          .item
-            p.text-medium #{news3}
+mixin roadmap(src, title, date)
+  - if (typeof(src) === 'undefined') src = 'images/upload/thumb-1.jpg'
+  - if (typeof(title) === 'undefined') title = 'DRINKING EDITION'
+  - if (typeof(date) === 'undefined') date = '10 NOVEMBER 2017'
+    article.roadmap
+      +link().image(style="background-image: url("+src+");")
+      .caption
+        h2.title-3 #{title}
+        h2.title-3 #{date}
