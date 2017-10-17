@@ -24,7 +24,7 @@
     width: 100%;
     cursor: pointer;
     span {
-      &:extend(.txt-purple);
+      &:extend(.txt-blue);
       display: table-cell;
       vertical-align: middle;
       padding-right: @grid;
@@ -52,92 +52,6 @@
 
     &.table {
       padding: 0;
-    }
-  }
-}
-.loan-faqs {
-  .collapse-inner {
-    background: #f0f2f4;
-    padding: 15px 20px;
-    p {
-      &:extend(.text-medium);
-    }
-    .item {
-      padding-left: @m-grid;
-      &:first-child {
-        padding-top: @m-grid-small;
-      }
-      &:last-child {
-        padding-bottom: @m-grid-small;
-      }
-
-
-      a {
-        &:extend(.txt-purple);
-        overflow: hidden;
-        font-size: @font-medium;
-        line-height: 22px;
-        .transition(0.3s);
-        height: 70px;
-        display: table;
-        width: 100%;
-        vertical-align: middle;
-        @media @from-mobile {
-          padding: @grid-small 0;
-        }
-        span {
-          display: table-cell;
-          height: 100%;
-          vertical-align: middle;
-          padding-left: 40px;
-          position: relative;
-        }
-      }
-    }
-  }
-}
-.full-accordion {
-  overflow: hidden;
-  .collapse-item {
-    &:nth-child(1) {
-      margin-top: @grid;
-      .collapse-header {
-        border-top: 1px solid #ededed;
-      }
-    }
-  }
-  .collapse-inner {
-    &.grey {
-      padding: 40px 108px 40px @grid;
-      background-color: #f8f8f9;
-      @media @from-mobile {
-        padding: 40px @grid;
-      }
-    }
-  }
-}
-.bor-bot {
-  height: 70px;
-  line-height: 70px;
-  border-bottom: 1px solid #ededed;
-  .link-default {
-    display: block;
-  }
-}
-
-.awards {
-  .collapse-header {
-    &:first-child {
-      border-top: 1px solid #ededed;
-    }
-  }
-  .collapse-inner {
-    background-color: #f8f8f9;
-    padding: @grid;
-  }
-  .list-default {
-    li {
-      line-height: 2.81;
     }
   }
 }

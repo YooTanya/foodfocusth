@@ -9,7 +9,6 @@
 }
 
 .life-stage {
-  background-color: #ffffff;
   padding: 25px 0;
   border-radius: 4px;
   .box-shadow-default();
@@ -35,9 +34,6 @@
     }
     .text {
       font: @font-medium @font-family-medium;
-      [lang="th"] & {
-        font-family: @font-family-medium-th;
-      }
       color: black;
       display: block;
       margin-top: 10px;
@@ -125,14 +121,7 @@
       .transition(all 0.5s);
 
     }
-    &:before {
-      background-image: url(../images/icons/ic-left-leaf.svg);
-      left: 17px;
-    }
-    &:after {
-      background-image: url(../images/icons/ic-right-leaf.svg);
-      left: 30px;
-    }
+    
   }
   .no-touch.desktop & {
     &:hover {
@@ -173,9 +162,6 @@
   &.custom {
     .link-primary {
       color: white!important;
-      &:after{
-        background-image: url(../images/icons/ic-arrow-more-white.svg);
-      }
     }
   }
 
@@ -568,7 +554,6 @@
     float: left;
     width: 50%;
   }
-  /*.calHeightOnlyMedium();*/
   @media @medium-screen {
     height: 317px;
   }
@@ -751,7 +736,6 @@ table {
 .story {
   overflow: hidden;
   position: relative;
-  border-radius: 4px;
   -webkit-transform: translate3d(0,0,0);
   .box-shadow-default();
   @media @only-desktop-lg {
@@ -764,19 +748,12 @@ table {
     background-repeat: no-repeat;
     display: block;
     .size(100%);
-    .transition(1s);
-    -webkit-transform: translate3d(0,0,0);
     position: relative;
     z-index: 2;
   }
   .no-touch.desktop & {
     &:hover {
-      border-radius: 4px;
       box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.13);
-      .story-thumb {
-        transform: translate3d(0,0,0) rotate(2deg) scale(1.1);
-        -webkit-transform: translate3d(0,0,0) rotate(2deg) scale(1.1);
-      }
     }
   }
   .story-info {
@@ -1031,9 +1008,9 @@ table {
         a {
           color: black;
           &.active {
-            &:extend(.txt-purple);
+            &:extend(.txt-blue);
             padding-bottom: 3px;
-            border-bottom: 2px solid @purple-color;
+            border-bottom: 2px solid @blue-color;
           }
 
           &:after {
@@ -1041,7 +1018,7 @@ table {
           }
           .no-touch.desktop & {
             &:hover {
-              &:extend(.txt-purple);
+              &:extend(.txt-blue);
             }
           }
         }

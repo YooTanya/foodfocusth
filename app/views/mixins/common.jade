@@ -20,8 +20,7 @@ mixin banner-book-image(src, book, subtitle, title, content, issue)
                   p.sub-title.txt-white LATEST ISSUE
                   p.sub-title-2.txt-white #{issue}
               .subscribe.mar-top
-                a
-                  p.txt-mediumer SUBSCRIBE TO NEWSLETTER
+                a.txt-mediumer SUBSCRIBE TO NEWSLETTER
 
 mixin story(src, title, content)
   - if (typeof(src) === 'undefined') src = 'images/upload/photo-md-15.jpg'
@@ -42,7 +41,7 @@ mixin product(src, title)
       figure
         .thumb(style="background-image: url("+src+")")
       figcaption
-        h3.title #{title}
+        h3.title-3.txt-black #{title}
 
 mixin news(src, news1, news2, news3)
   - if (typeof(src) === 'undefined') src = 'images/upload/thumb-4.jpg'
