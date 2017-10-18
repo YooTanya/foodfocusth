@@ -5,10 +5,22 @@
     white-space: nowrap;
     li {
       display: inline-block;
+      margin: 0 25px;
+      @media @from-tablet-portrait {
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      @media @from-mobile-portrait {
+        margin: 0 5px;
+      }
     }
     a {
       padding: @grid-small 50px;
       background-color: #dedede;
+      display: block;
+      color: white;
+      text-align: center;
       &.active {
         background-color: #95c848;
       }
@@ -21,28 +33,17 @@
     &.center {
       text-align: center;
       margin: 90px 0 @grid;
+    }
+
+    &.services {
+      margin: 0;
       li {
-        margin: 0 25px;
-        @media @from-tablet-portrait {
-          &:first-child {
-            margin-left: 0;
-          }
-        }
-        @media @from-mobile-portrait {
-          margin: 0 5px;
-        }
+        width: 200px;
+        height: 150px;
       }
       a {
-        display: block;
-        color: white;
-        &.active {
-          background-color: #95c848;
-        }
-        .no-touch.desktop & {
-          &:hover {
-            background-color: #95c848;
-          }
-        }
+        padding: @grid-small;
+        white-space: normal;
       }
     }
   }
