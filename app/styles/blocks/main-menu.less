@@ -40,6 +40,9 @@
         position: relative;
       }
       &:hover {
+        a.link-sub {
+          color: @blue-color;
+        }
         > .mega-menu {
           display: block;
         }
@@ -63,7 +66,7 @@
   background-position: center center;
   display: none;
   height: auto;
-  width: 80%;
+  width: fit-content;
   margin: 0 auto;
   &:before {
     content: '';
@@ -74,6 +77,7 @@
     left: 0;
     right: 0;
   }
+
   .menu-wrap {
     overflow-y: auto;
     position: relative;
