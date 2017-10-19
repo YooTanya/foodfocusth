@@ -16,7 +16,7 @@
     }
   }
   figcaption {
-    margin: @grid @grid-small;
+    margin: @grid-small;
     @media @from-tablet {
       margin: @m-grid;
     }
@@ -47,13 +47,15 @@
   .title {
     padding-top: 5px;
     text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .desc {
     padding: 10px 0;
-  }
-  .link-primary {
-    position: absolute;
-    bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .card-image {
     width: 70%;

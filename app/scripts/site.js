@@ -33,6 +33,51 @@ FFC = (function(w){
     });
   };
 
+  var tab = function(){
+    var ele = $('[data-tab-header]');
+    if ($('html').hasClass('mobile') && ele.attr('data-has-label')) {
+      var tabLabel = ele.siblings('[data-tab-label]');
+      tabLabel.on('click', function(){
+        ele.slideToggle();
+      });
+      ele.on('click', 'a', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var that = $(this);
+        ele.slideUp('500', function(){
+          var tab = that.closest('[data-tab]');
+          tab.find('[data-tab-header] a.active').removeClass('active');
+          var tabContent = tab.closest('[data-tab-content] .active[id]').removeClass('active');
+          tabContent.find('.checked').removeClass('checked');
+          var newContent = that.attr('href');
+          that.addClass('active');
+          var activeTab = tab.find(newContent).addClass('active');
+          $('[data-comparisonBar]').comparisonBar('reset');
+          $('[data-comparisonBar]').comparisonBar('loadOptions', activeTab.find('[data-item-container]').children());
+          tabLabel.find('.label-container').empty().append(that.prop('outerHTML'));
+        });
+
+      });
+    } else {
+      ele.on('click.menu1Mobile', 'a',  function(e) {
+        e.preventDefault();
+        var tab = $(this).closest('[data-tab]');
+        tab.find('[data-tab-header] a.active').removeClass('active');
+        var tabContent = tab.find('[data-tab-content] .active[id]').removeClass('active');
+        tabContent.find('.checked').removeClass('checked');
+        var newContent = $(this).attr('href');
+        $(this).addClass('active');
+        var activeTab = tab.find(newContent).addClass('active');
+      });
+      if(ele.attr('data-activeByHash')) {
+        var hash = window.location.hash;
+        if(hash) {
+          ele.find('a[href='+hash+']').trigger('click');
+        }
+      }
+    }
+  };
+
   var ajax = function(url, param, type) {
     param = $.extend({'_charset_':'UTF-8'}, param);
     return $.ajax({
@@ -46,6 +91,7 @@ FFC = (function(w){
     init: init,
     vars: vars,
     megaMenu: megaMenu,
+    tab: tab,
     ajax:ajax
   }
 })(window);
@@ -53,4 +99,5 @@ FFC = (function(w){
 $(document).ready(function() {
   FFC.init();
   FFC.megaMenu();
+  FFC.tab();
 });
