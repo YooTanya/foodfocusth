@@ -14,12 +14,16 @@ block container
         .col-sm-12
           h2.title.light.mar-bot SERVICES
         .col-sm-12
-          section(data-tab)
-            ul.center.services(data-tab-header)
-              li: +link('CONTRACT PUBLICATION','#publication').active.title-2.light
-              li: +link('ANNIVERSARY AND ANNUAL REPORT','#annual-report').title-2.light
-              li: +link('COMPANY PROFILE AND PRODUCT CATALOG','#catalog').title-2.light
-              li: +link('EVENT ORGANIZER','#event').title-2.light
+          section.services-tab(data-tab)
+            .row(data-tab-header)
+              .col
+                +link('CONTRACT PUBLICATION','#publication').active.title-2.light 
+              .col
+                +link('ANNIVERSARY AND ANNUAL REPORT','#annual-report').title-2.light
+              .col
+                +link('CONTRACT PUBLICATION','#catalog').title-2.light
+              .col
+                +link('ANNIVERSARY AND ANNUAL REPORT','#event').title-2.light
             section(data-tab-content)
               .inner#publication.active
                 .col-sm-6.col-md-4
@@ -50,4 +54,5 @@ block container
                 .col-sm-6.col-md-4
                   +roadmap('images/upload/thumb-2.jpg')
 
-                    
+                            
+       

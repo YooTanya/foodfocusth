@@ -12,12 +12,16 @@ block container
     .inner-container
       .row-centered
         .col-sm-12
-          section(data-tab)
-            ul.center(data-tab-header)
-              li: +link('2017','#2017').active.title-primary.light
-              li: +link('2016','#2016').title-primary.light
-              li: +link('2015','#2015').title-primary.light
-              li: +link('2014','#2014').title-primary.light
+          section.default-tab(data-tab)
+            .row(data-tab-header)
+              .col 
+                +link('2017','#2017').active.title-primary.light
+              .col
+                +link('2016','#2016').title-primary.light
+              .col
+                +link('2015','#2015').title-primary.light
+              .col
+                +link('2014','#2014').title-primary.light
             section(data-tab-content)
               .inner#2017.active
                 +roadmap()

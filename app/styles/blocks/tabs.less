@@ -1,59 +1,79 @@
-[data-tab] {
-  [data-tab-header] {
-    overflow: hidden;
-    overflow-x: auto;
-    white-space: nowrap;
-    li {
-      display: inline-block;
-      margin: 0 25px;
-      @media @from-tablet-portrait {
-        &:first-child {
-          margin-left: 0;
-        }
-      }
-      @media @from-mobile-portrait {
-        margin: 0 5px;
+.default-tab {
+  .col {
+    display: inline-block;
+    margin: 0 25px;
+    padding: 30px;
+    @media @from-tablet-portrait {
+      &:first-child {
+        margin-left: 0;
       }
     }
-    a {
-      padding: @grid-small 50px;
-      background-color: #dedede;
-      display: block;
-      color: white;
-      text-align: center;
-      &.active {
-        background-color: #95c848;
-      }
-      .no-touch.desktop & {
-        &:hover {
-          background-color: #95c848;
-        }
-      }
+    @media @from-mobile-portrait {
+      margin: 0 5px;
     }
-    &.center {
-      text-align: center;
-      margin: 90px 0 @grid;
-    }
+  }
+  // a {
+  //   padding: @grid-small 50px;
+  //   background-color: #dedede;
+  //   display: block;
+  //   color: white;
+  //   text-align: center;
+  //   &.active {
+  //     background-color: #95c848;
+  //   }
+  //   .no-touch.desktop & {
+  //     &:hover {
+  //       background-color: #95c848;
+  //     }
+  //   }
+  // }
+  
+  text-align: center;
+  margin: 90px 0 @grid;
+}
 
-    &.services {
-      margin: 0;
-      li {
-        width: 200px;
-        height: 150px;
-      }
+
+.services-tab {
+  border-collapse:separate;
+  border-spacing: 15px;
+  .col {
+    display: table-cell;
+    background-color: #ededed;
+    padding: 30px;
+    width: 25%;
+    white-space: normal;
+    vertical-align: middle;
+    text-align: center;
+    a {
+      color: white;
+    }
+    &.active {
+      background-color: #95c848;
       a {
-        padding: @grid-small;
-        white-space: normal;
+        color: black;
+      }
+    }
+    .no-touch.desktop & {
+      &:hover {
+        background-color: #95c848;
+        a {
+          color: black;
+        }
       }
     }
   }
+}
+[data-tab-header] {
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 
-  [data-tab-content]{
-    .inner.active {
-      display: block;
-    }
-    .inner {
-      display: none;
-    }
+[data-tab-content]{
+  .inner.active {
+    display: block;
+  }
+  .inner {
+    display: none;
   }
 }
