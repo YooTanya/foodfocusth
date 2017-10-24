@@ -14,14 +14,14 @@ block container
         .col-sm-12
           section.default-tab(data-tab)
             .row(data-tab-header)
-              .col 
-                +link('2017','#2017').active.title-primary.light
-              .col
-                +link('2016','#2016').title-primary.light
-              .col
-                +link('2015','#2015').title-primary.light
-              .col
-                +link('2014','#2014').title-primary.light
+              +link('','#2017').active.col 
+                h3.title-primary.light 2017
+              +link('','#2016').col
+                h3.title-primary.light 2016
+              +link('','#2015').col
+                h3.title-primary.light 2015
+              +link('','#2014').col
+                h3.title-primary.light 2014
             section(data-tab-content)
               .inner#2017.active
                 +roadmap()

@@ -12,47 +12,71 @@ block container
     .inner-container
       .row
         .col-sm-12
-          h2.title.light.mar-bot SERVICES
+          h2.title.light SERVICES
         .col-sm-12
           section.services-tab(data-tab)
             .row(data-tab-header)
-              .col
-                +link('CONTRACT PUBLICATION','#publication').active.title-2.light 
-              .col
-                +link('ANNIVERSARY AND ANNUAL REPORT','#annual-report').title-2.light
-              .col
-                +link('CONTRACT PUBLICATION','#catalog').title-2.light
-              .col
-                +link('ANNIVERSARY AND ANNUAL REPORT','#event').title-2.light
+              +link('','#publication').col.active
+                h3.title-2.light CONTRACT PUBLICATION
+              +link('','#annual-report').col
+                h3.title-2.light ANNIVERSARY AND ANNUAL REPORT
+              +link('','#catalog').col
+                h3.title-2.light COMPANY PROFILE AND PRODUCT CATALOG
+              +link('','#event').col
+                h3.title-2.light EVENT ORGANIZER
             section(data-tab-content)
               .inner#publication.active
                 .col-sm-6.col-md-4
-                  +roadmap()
+                  +link().magazine
+                    +img('images/upload/book-2.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
                 .col-sm-6.col-md-4
-                  +roadmap()
+                  +link().magazine
+                    +img('images/upload/book-3.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
                 .col-sm-6.col-md-4
-                  +roadmap()
+                  +link().magazine
+                    +img('images/upload/book-4.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
               .inner#annual-report
                 .col-sm-6.col-md-4
-                  +roadmap('images/upload/thumb-2.jpg')
+                  +link().magazine
+                    +img('images/upload/book-4.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
                 .col-sm-6.col-md-4
-                  +roadmap('images/upload/thumb-2.jpg')
+                  +link().magazine
+                    +img('images/upload/book-3.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
                 .col-sm-6.col-md-4
-                  +roadmap('images/upload/thumb-2.jpg')
+                  +link().magazine
+                    +img('images/upload/book-2.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
               .inner#catalog
                 .col-sm-6.col-md-4
-                  +roadmap()
+                  +link().magazine
+                    +img('images/upload/book-2.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
                 .col-sm-6.col-md-4
-                  +roadmap()
+                  +link().magazine
+                    +img('images/upload/book-3.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
                 .col-sm-6.col-md-4
-                  +roadmap()
+                  +link().magazine
+                    +img('images/upload/book-4.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
               .inner#event
                 .col-sm-6.col-md-4
-                  +roadmap('images/upload/thumb-2.jpg')
+                  +link().magazine
+                    +img('images/upload/book-4.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
                 .col-sm-6.col-md-4
-                  +roadmap('images/upload/thumb-2.jpg')
+                  +link().magazine
+                    +img('images/upload/book-3.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
                 .col-sm-6.col-md-4
-                  +roadmap('images/upload/thumb-2.jpg')
+                  +link().magazine
+                    +img('images/upload/book-2.jpg')
+                    h2.title-3.mar-top.mar-bot ชื่อนิตยสาร
 
                             
        
