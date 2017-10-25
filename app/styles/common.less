@@ -303,7 +303,7 @@
     overflow: hidden;
     list-style-type: none;
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding: 10px 0 5px;
+    padding: 10px 0;
   }
   a {
     color: black;
@@ -315,18 +315,22 @@
 
     .no-touch.desktop & {
       &:hover {
-        color: @blue-color;
+        span {
+          color: @blue-color;
+        }
       }
     }
     &:active {
-      color: @blue-color;
+      span {
+        color: @blue-color;
+      }
     }
     span {
       vertical-align: middle;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      height: 45px;
+      height: auto;
       max-height: 16*1.5*3 + 10px;
       overflow: hidden;
     }
