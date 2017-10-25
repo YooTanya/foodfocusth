@@ -21,9 +21,36 @@
       margin: @m-grid;
     }
   }
+  .book-image {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
   .no-touch.desktop & {
     &:hover{
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.thumb-default.magazine {
+  .inner {
+    display: block;
+  }
+  .no-touch.desktop & {
+    &:hover{
+      .inner h3 {
+        color: black;
+      }
     }
   }
 }
@@ -93,6 +120,7 @@
     background-color: rgba(255, 255, 255, 0.85);
     color: black;
     height: 40%;
+    width: 100%;
   }
   .no-touch.desktop & {
     &:hover{

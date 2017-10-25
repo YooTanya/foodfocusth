@@ -37,17 +37,22 @@
 
 .services-tab {
   border-collapse:separate;
-  border-spacing: 15px;
+  border-spacing: 15px 0;
   .col {
     display: table-cell;
     background-color: #ededed;
-    padding: 30px;
+    padding: @grid;
     width: 25%;
+    min-width: 200px;
     white-space: normal;
     vertical-align: middle;
     text-align: center;
     h3 {
       color: white;
+    }
+
+    @media @from-tablet-portrait {
+      padding: @grid-small;
     }
     &.active {
       background-color: #95c848;
@@ -81,10 +86,10 @@
 }
 
 [data-tab-content]{
-  .inner.active {
+  > .inner.active {
     display: block;
   }
-  .inner {
+  > .inner {
     display: none;
   }
 }
