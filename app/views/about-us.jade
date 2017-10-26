@@ -1,0 +1,60 @@
+extends layouts/layout
+
+block vars
+  -title = 'About Us'
+  -bodyClass = ''
+
+
+block container
+  section.banner-wrap
+    +banner('images/upload/magazine-bg.jpeg','ABOUT US','ยูวีวิลล์คอร์ปแทงโก้ เทียมทาน แพ็คครัวซองต์วิภัชภาค โคโยตี้อิเลียดสุนทรีย์ซิมโฟนีคาวบอย เพนตากอนสเตชันนินจา ชีสอินดอร์แฟนตาซีตุ๋ยแพทยสภา วันเวย์ไนท์วาริชศาสตร์ ตอกย้ำสถาปัตย์มาร์เก็ตสมาพันธ์ อีแต๋น ไทเฮาเวิร์กบ๊วยนอร์ท หยวนโมเต็ลแฟนตาซีบอมบ์ บาลานซ์ ไอติมวิวอวอร์ดเต๊ะ เทคพุทโธ เบลอสปาแคมเปญมวลชนสเตชั่น เฝอมินท์')
+  section(data-tab)
+    ul.center(data-tab-header)
+      li: +link('ADVERTISER','#advertiser').active.title-primary.light
+      li: +link('BOARD OF CONSULTANTS/ENDORSEMENT','#board').title-primary.light
+    section(data-tab-content)
+      .inner#advertiser.active
+        .inner-container
+          .row
+            .col-xs-12
+              h2.title.light.mar-bot-md ADVERTISER
+              
+      .inner#board
+        .outer(style="background-color: #dddddd;")
+          .inner-container
+            .row
+              .col-xs-12
+                h2.title.light.mar-bot-md BOARD OF CONSULTANT
+              .col-md-6.col-sm-12
+                +profile()
+              .col-md-6.col-sm-12
+                +profile()
+              .col-md-6.col-sm-12
+                +profile()
+              .col-md-6.col-sm-12
+                +profile()
+              .col-md-6.col-sm-12
+                +profile()
+              .col-md-6.col-sm-12
+                +profile()
+        .outer(style="background-color: white;")
+          .inner-container
+            .row
+              .col-xs-12
+                h2.title.light.mar-bot-md ENDORSEMENT
+            .row-centered.endorsement
+              +link-img('images/upload/endorsement-1.jpg')
+              +link-img('images/upload/endorsement-2.jpg')
+              +link-img('images/upload/endorsement-3.jpg')
+              +link-img('images/upload/endorsement-1.jpg')
+              +link-img('images/upload/endorsement-2.jpg')
+              +link-img('images/upload/endorsement-3.jpg')
+              +link-img('images/upload/endorsement-1.jpg')
+              +link-img('images/upload/endorsement-2.jpg')
+              +link-img('images/upload/endorsement-1.jpg')
+              +link-img('images/upload/endorsement-2.jpg')
+              +link-img('images/upload/endorsement-3.jpg')
+              +link-img('images/upload/endorsement-1.jpg')
+      
+
+            
