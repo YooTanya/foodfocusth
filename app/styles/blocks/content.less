@@ -1,0 +1,33 @@
+section.content {
+  background-color: white;
+  .sub-title-bg {
+    display: inline-block;
+  }
+  .content-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+  }
+
+  .content-item {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: @grid-small 0 @m-grid-small;
+    img {
+      margin-bottom: @m-grid-small;
+    }
+    @media @from-tablet-portrait {
+      margin-top: @grid-small;
+    }
+    .no-touch.desktop & {
+      &:hover {
+        span {
+          color: @blue-color;
+        }
+      }
+    }
+    &:active {
+      span {
+        color: @blue-color;
+      }
+    }
+  }
+}
