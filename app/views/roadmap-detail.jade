@@ -1,0 +1,50 @@
+extends layouts/layout
+
+block vars
+  -title = 'Roadmap detail'
+  -bodyClass = ''
+
+
+block container
+  section.content.pad-top-lg.pad-bot-lg
+    .inner-container
+      .row
+        .col-md-1.hidden-xs.hidden-sm
+          ul.list-icons.pad-top-lg
+            li: +link-img('images/icons/ic-fb.svg','#')
+            li: +link-img('images/icons/ic-twitter.svg','#')
+            li: +link-img('images/icons/ic-linkedin.svg','#')
+
+        .col-md-8.col-sm-12
+          h3.sub-title-bg.txt-white ROADMAP
+          .content-header.mar-top
+            span.title.light.txt-black DRINKING EDITION
+            span.title-3.light.txt-black.mar-left 10 NOVEMBER 2017
+          .content-body
+            +img('images/upload/thumb-1.jpg').mar-top-md.mar-bot-md
+            p.text-medium กุนซือไอติมวานิลาฮองเฮาโครนา สจ๊วตป๋าท็อปบูตโปรเจกเตอร์โทรโข่ง แบรนด์อ่วมแคชเชียร์พาสตา แฟรีเรตติ้งพะเรอไมค์ ล็อตโหงวเฮ้งคลาสสิกแฟรี สจ๊วตสเตเดียมแพนดาเอ็นเตอร์เทน เกย์เคลียร์หยวนคาวบอยสแตนดาร์ด เลคเชอร์ศิรินทร์ว้อดก้า มิวสิคยูโรดีไซน์เนอร์สแล็ก ออร์แกนแรงดูดแคทวอล์คฉลุย ช็อปปิ้งเอเซีย คีตปฏิภาณพุดดิ้ง รามเทพซูโม่พูลแช่แข็ง ฮ่องเต้โปรเจ็กต์ปาสเตอร์ไฟต์ ยิมเรตติ้ง จิ๊กโก๋เคลียร์นพมาศ
+            p.text-medium.mar-top กุนซือไอติมวานิลาฮองเฮาโครนา สจ๊วตป๋าท็อปบูตโปรเจกเตอร์โทรโข่ง แบรนด์อ่วมแคชเชียร์พาสตา แฟรีเรตติ้งพะเรอไมค์ ล็อตโหงวเฮ้งคลาสสิกแฟรี สจ๊วตสเตเดียมแพนดาเอ็นเตอร์เทน เกย์เคลียร์หยวนคาวบอยสแตนดาร์ด เลคเชอร์ศิรินทร์ว้อดก้า มิวสิคยูโรดีไซน์เนอร์สแล็ก ออร์แกนแรงดูดแคทวอล์คฉลุย ช็อปปิ้งเอเซีย คีตปฏิภาณพุดดิ้ง รามเทพซูโม่พูลแช่แข็ง ฮ่องเต้โปรเจ็กต์ปาสเตอร์ไฟต์ ยิมเรตติ้ง จิ๊กโก๋เคลียร์นพมาศ
+
+            +img('images/upload/thumb-2.jpg').mar-top-md.mar-bot-md
+            p.text-medium กุนซือไอติมวานิลาฮองเฮาโครนา สจ๊วตป๋าท็อปบูตโปรเจกเตอร์โทรโข่ง แบรนด์อ่วมแคชเชียร์พาสตา แฟรีเรตติ้งพะเรอไมค์ ล็อตโหงวเฮ้งคลาสสิกแฟรี สจ๊วตสเตเดียมแพนดาเอ็นเตอร์เทน เกย์เคลียร์หยวนคาวบอยสแตนดาร์ด เลคเชอร์ศิรินทร์ว้อดก้า มิวสิคยูโรดีไซน์เนอร์สแล็ก ออร์แกนแรงดูดแคทวอล์คฉลุย ช็อปปิ้งเอเซีย คีตปฏิภาณพุดดิ้ง รามเทพซูโม่พูลแช่แข็ง ฮ่องเต้โปรเจ็กต์ปาสเตอร์ไฟต์ ยิมเรตติ้ง จิ๊กโก๋เคลียร์นพมาศ
+            p.text-medium.mar-top กุนซือไอติมวานิลาฮองเฮาโครนา สจ๊วตป๋าท็อปบูตโปรเจกเตอร์โทรโข่ง แบรนด์อ่วมแคชเชียร์พาสตา แฟรีเรตติ้งพะเรอไมค์ ล็อตโหงวเฮ้งคลาสสิกแฟรี 
+
+        .col-sm-12.hidden-md-up
+          ul.list-icons
+            li: +link-img('images/icons/ic-fb.svg','#')
+            li: +link-img('images/icons/ic-twitter.svg','#')
+            li: +link-img('images/icons/ic-linkedin.svg','#')
+        .col-md-3.col-xs-12
+          .col-sm-12
+            h2.title Other Events
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('images/upload/thumb-2.jpg','บัส โปรเจคแบคโฮสตีลเซอร์ตัวเอง')
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('images/upload/thumb-2.jpg','บัส โปรเจคแบคโฮสตีลเซอร์ตัวเอง')
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('images/upload/thumb-2.jpg','บัส โปรเจคแบคโฮสตีลเซอร์ตัวเอง')
+
+      
