@@ -341,6 +341,28 @@
     }
   }
 }
+.list-icons {
+  @media @from-tablet-portrait {
+    li {
+      float: left;
+      img {
+        max-width: 128px;
+        max-height: 128px;
+        padding: @grid-small 0 @grid;
+      }
+    }
+  }
+  a {
+    .no-touch.desktop & {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
 
 input::-webkit-contacts-auto-fill-button {
   visibility: hidden;
