@@ -64,3 +64,19 @@ mixin roadmap(src, title, date)
       .caption
         h2.title-3 #{title}
         h2.title-3 #{date}
+
+mixin profile(src, fullname, text1, text2, text3)
+  - if (typeof(src) === 'undefined') src = 'images/upload/thumb-1.jpg'
+  - if (typeof(fullname) === 'undefined') fullname = 'VISIT LIMPRANA'
+  - if (typeof(text1) === 'undefined') text1 = 'HONORARY ADVISOR'
+  - if (typeof(text2) === 'undefined') text2 = 'FOOD PROCESSING INDUSTRY CLUB'
+  - if (typeof(text3) === 'undefined') text3 = 'THE FEDERATION OF THAI INDUSTRIES'
+    .profile
+      .thumb(style="background-image:url("+src+")")
+      .profile-detail
+        .detail-group
+          h2.text-medium #{fullname}
+          p.text-x-small #{text1}
+          p.text-x-small #{text2}
+          p.text-x-small #{text3}
+
