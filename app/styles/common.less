@@ -342,13 +342,22 @@
   }
 }
 .list-icons {
+  img {
+    max-width: 54px;
+    max-height: 54px;
+  }
+ 
   @media @from-tablet-portrait {
     li {
       float: left;
       img {
-        max-width: 128px;
-        max-height: 128px;
-        padding: @grid-small 0 @grid;
+        max-width: 64px;
+        max-height: 64px;
+        margin: @grid-small 0 @grid;
+
+        &:first-child {
+          margin-left: 0;
+        }
       }
     }
   }
