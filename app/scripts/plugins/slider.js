@@ -45,6 +45,13 @@
       dots: true
     });
     
+    $('.ads-carousel').slick({
+      autoplay: false,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false
+    });    
     $('.carousel').each(function() {
       if($(this).find('.item').length > 3) {
         $(this).slick({
