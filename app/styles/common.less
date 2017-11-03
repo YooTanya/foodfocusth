@@ -341,6 +341,37 @@
     }
   }
 }
+.list-icons {
+  img {
+    max-width: 54px;
+    max-height: 54px;
+  }
+ 
+  @media @from-tablet-portrait {
+    li {
+      float: left;
+      img {
+        max-width: 64px;
+        max-height: 64px;
+        margin: @grid-small 0 @grid;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  a {
+    .no-touch.desktop & {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
 
 input::-webkit-contacts-auto-fill-button {
   visibility: hidden;
@@ -396,5 +427,10 @@ input::-webkit-contacts-auto-fill-button {
       }
     }
   }
+}
+
+.sub-title-bg {
+  background-color: @blue-color; 
+  padding: @m-grid @m-grid @m-grid-small;
 }
 
