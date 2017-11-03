@@ -192,9 +192,22 @@
 .banner-wrap .item.medium {
   .thumb {
     height: 350px;
-
     @media @from-tablet-portrait {
       height: 240px;
+    }
+  }
+  .caption {
+    h2, p {
+      font-family: @font-thumb-normal;
+    }
+    h2 {
+      @media @from-mobile {
+        font-size: 2.47rem;
+      }
+    }
+    p {
+      &:extend(.text-mediumer);
+      line-height: 1.25;
     }
   }
 }

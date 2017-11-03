@@ -1,58 +1,95 @@
-[data-tab] {
-  [data-tab-header] {
-    overflow: hidden;
-    overflow-x: auto;
-    white-space: nowrap;
-    li {
-      display: inline-block;
+.default-tab {
+  .col {
+    display: inline-block;
+    margin: 0 25px;
+    padding: 20px 40px 10px;
+    background-color: #ededed;
+    @media @from-tablet-portrait {
+      &:first-child {
+        margin-left: 0;
+      }
     }
-    a {
-      padding: @grid-small 50px;
-      background-color: #dedede;
-      &.active {
+    @media @from-mobile-portrait {
+      margin: 0 5px;
+    }
+    h3 {
+      color: white;
+    }
+    &.active {
+      background-color: #95c848;
+      h3 {
+        color: black;
+      }
+    }
+    .no-touch.desktop & {
+      &:hover {
         background-color: #95c848;
-      }
-      .no-touch.desktop & {
-        &:hover {
-          background-color: #95c848;
-        }
-      }
-    }
-    &.center {
-      text-align: center;
-      margin: 90px 0 @grid;
-      li {
-        margin: 0 25px;
-        @media @from-tablet-portrait {
-          &:first-child {
-            margin-left: 0;
-          }
-        }
-        @media @from-mobile-portrait {
-          margin: 0 5px;
-        }
-      }
-      a {
-        display: block;
-        color: white;
-        &.active {
-          background-color: #95c848;
-        }
-        .no-touch.desktop & {
-          &:hover {
-            background-color: #95c848;
-          }
+        h3 {
+          color: black;
         }
       }
     }
   }
+  text-align: center;
+  margin: 90px 0 @grid;
+}
 
-  [data-tab-content]{
-    .inner.active {
-      display: block;
+
+.services-tab {
+  border-collapse:separate;
+  border-spacing: 15px 0;
+  .col {
+    display: table-cell;
+    background-color: #ededed;
+    padding: @grid;
+    width: 25%;
+    min-width: 200px;
+    white-space: normal;
+    vertical-align: middle;
+    text-align: center;
+    h3 {
+      color: white;
     }
-    .inner {
-      display: none;
+
+    @media @from-tablet-portrait {
+      padding: @grid-small;
     }
+    &.active {
+      background-color: #95c848;
+      h3 {
+        color: black;
+      }
+    }
+    .no-touch.desktop & {
+      &:hover {
+        background-color: #95c848;
+        h3 {
+          color: black;
+        }
+      }
+    }
+  }
+  .magazine {
+    h3 {
+      .no-touch.desktop & {
+        &:hover {
+          color: @blue-color;
+        }
+      }
+    }
+  }
+}
+[data-tab-header] {
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+[data-tab-content]{
+  > .inner.active {
+    display: block;
+  }
+  > .inner {
+    display: none;
   }
 }

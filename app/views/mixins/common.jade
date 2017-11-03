@@ -43,8 +43,8 @@ mixin story(src, title, content)
       .caption
         .desc
           - if (typeof(title) !== 'undefined')
-            h2.title #{title}
-          p.text-mediumer #{content}
+            h2.title-1-thumb #{title}
+          p.text-mediumer-thumb #{content}
 
 mixin product(src, title)
   - if (typeof(src) === 'undefined') src = 'images/upload/thumb-1.jpg'
@@ -53,8 +53,19 @@ mixin product(src, title)
       figure
         .thumb(style="background-image: url("+src+")")
       figcaption
-        h3.title-3.txt-black #{title}
+        h3.title-3-thumb.txt-black #{title}
 
+mixin product-2(card, title)
+  - if (typeof(card) === 'undefined') card = 'images/upload/thumb-4.jpg'
+  - if (typeof(title) === 'undefined') title = 'Your Personal Needs'
+    +link().product.thumb-default.magazine&attributes(attributes)
+      figure
+        +img(card).book-image
+        .thumb(style="background-color: #ededed;")
+      figcaption
+        .inner
+          h3.title-1-thumb.txt-black #{title}
+          
 mixin roadmap(src, title, date)
   - if (typeof(src) === 'undefined') src = 'images/upload/thumb-1.jpg'
   - if (typeof(title) === 'undefined') title = 'DRINKING EDITION'
@@ -62,5 +73,5 @@ mixin roadmap(src, title, date)
     article.roadmap
       +link().image(style="background-image: url("+src+");")
       .caption
-        h2.title-3 #{title}
-        h2.title-3 #{date}
+        h2.title-1-thumb #{title}
+        h2.title-1-thumb #{date}

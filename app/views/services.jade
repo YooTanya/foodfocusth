@@ -1,0 +1,82 @@
+extends layouts/layout
+
+block vars
+  -title = 'Services'
+  -bodyClass = ''
+
+
+block container
+  section.banner-wrap
+    +banner()
+  .wrapper.pad-top-lg.pad-bot-lg
+    .inner-container
+      .row
+        .col-sm-12
+          h2.title.light.mar-bot SERVICES
+        .col-sm-12
+          section.services-tab(data-tab)
+            .row(data-tab-header)
+              +link('','#publication').col.active
+                h3.title-2.light CONTRACT PUBLICATION
+              +link('','#annual-report').col
+                h3.title-2.light ANNIVERSARY AND ANNUAL REPORT
+              +link('','#catalog').col
+                h3.title-2.light COMPANY PROFILE AND PRODUCT CATALOG
+              +link('','#event').col
+                h3.title-2.light EVENT ORGANIZER
+            section(data-tab-content).mar-top
+              .inner#publication.active
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-5.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-3.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-4.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-1.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-2.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-6.jpg','Magazine Name').mar-top
+              .inner#annual-report
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-2.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-1.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-4.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-5.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-2.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-6.jpg','Magazine Name').mar-top
+              .inner#catalog
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-5.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-3.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-4.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-1.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-2.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-6.jpg','Magazine Name').mar-top
+              .inner#event
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-2.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-1.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-4.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-5.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-2.jpg','Magazine Name').mar-top
+                .col-sm-6.col-md-4
+                  +product-2('images/upload/book-6.jpg','Magazine Name').mar-top
+
+                            
+       

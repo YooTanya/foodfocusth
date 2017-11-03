@@ -1,19 +1,21 @@
 
 .row-centered {
   text-align: center;
+  .roadmap {
+    margin: @grid 3rem;
+    @media @from-tablet-portrait {
+      margin: @m-grid 0;
+    }
+  }
 }
 
 .roadmap {
   width: 360px;
   display: inline-block;
-  margin: @grid 3rem;
+  margin: 60px 0;
   @media @from-mobile-375 {
     width: 320px;
   }
-  @media @from-tablet-portrait {
-    margin: @m-grid 0;
-  }
-
   @media @from-mobile-small {
     width: 240px;
   }
