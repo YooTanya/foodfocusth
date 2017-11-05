@@ -47,7 +47,7 @@
     $('.media-carousel').each(function(){
       if($(this).find('.item').length > 6) {
         $(this).slick({
-          autoplay: false,
+          autoplay: true,
           infinite: true,
           slidesToShow: 6,
           slidesToScroll: 1,
