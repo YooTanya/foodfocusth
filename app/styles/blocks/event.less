@@ -1,0 +1,88 @@
+.event {
+  padding: @grid @grid-small;
+  margin: @grid 0;
+  background-color: white;
+  display: table;
+  .size(100%);
+  .no-touch.desktop & {
+    &:hover{
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .event-date {
+    background-color: #95c848;
+    display: table-cell;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .event-group {
+    display: table-cell;
+    padding-left: 40px;
+    vertical-align: middle;
+  }
+
+  @media @from-mobile-375 {
+    .event-date,
+    .event-group {
+      display: block;
+    }
+    .event-date {
+      width: auto;
+      height: auto;
+      padding: @grid-small;
+    }
+    .event-group {
+      padding-left: 0;
+      margin-top: @grid-small;
+    }
+  }
+}
+
+.form-group {
+  width: 100%;
+  text-align: right;
+  .form-control {
+    display: inline-block;
+    &:extend(.input);
+    width: 79%;
+    margin-left: @m-grid;
+    &.half {
+      width: 38%;
+    }
+    border :1px solid @grey-color;
+    font-size: @font-medium;
+    padding: 0 @m-grid;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: white url('../images/icons/ic-dropdown.svg') no-repeat 97% center;
+    background-size: 18px;
+
+  }
+
+  @media @from-tablet-portrait {
+    .form-control,
+    .form-control.half {
+      display: inline-block;
+      margin-top: @m-grid-small;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    text-align: left;
+    display: inline-block;
+  }
+
+  &:last-child {
+    @media @from-tablet-portrait {
+      margin-bottom: @grid-small;
+
+    }
+  }
+}
