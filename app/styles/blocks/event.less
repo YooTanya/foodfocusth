@@ -46,34 +46,23 @@
 
 form .row {
   text-align: right;
+
   @media @from-tablet-portrait {
     text-align: left;
     label {
       margin-left: 1rem;
     }
   }
+  
 }
 .form-group {
   position: relative;
   display: inline-block;
+  width: 77%;
   &.half {
     width: 38%;
   }
-  width: 77%;
-  .form-control {
-    position: relative;
-    &:extend(.input);
-    margin-left: @m-grid;
-    border :1px solid @grey-color;
-    font-size: @font-medium;
-    padding: 0 @m-grid;
-    height: 48px;
-    line-height: 48px;
-    border-radius: 4px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
+  
   &:after{
     &:extend(.icon-dropdown:before);
     &:extend([class^="icon-"]:before, [class*=" icon-"]:before );
@@ -87,10 +76,13 @@ form .row {
     border-bottom-right-radius: 4px;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
+    height: 100%;
+    pointer-events: none;    
   }
 
   &:last-child {
     @media @from-tablet-portrait {
+      margin-top: @m-grid;
       margin-bottom: @grid-small;
     }
   }
@@ -103,6 +95,20 @@ form .row {
     }
   }
 
+
+  .form-control {
+    &:extend(.input);
+    margin-left: @m-grid;
+    border :1px solid @grey-color;
+    font-size: @font-medium;
+    padding: 0 @m-grid;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 }
 
 
