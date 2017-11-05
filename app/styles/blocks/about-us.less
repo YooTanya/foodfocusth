@@ -1,0 +1,33 @@
+.profile {
+  display: table;
+  color: black;
+  margin-bottom: @grid-small;
+  width: 100%;
+  height: 120px;
+  .profile-detail{
+    display: table-row;
+  }
+  .detail-group {
+    display: table-cell;
+    padding-left: 140px;
+    text-align:left;
+  }
+  .thumb {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.endorsement {
+  img {
+    width: 200px;
+    height: 120px;
+    display: inline-block;
+    margin: @grid-small;
+  }
+}

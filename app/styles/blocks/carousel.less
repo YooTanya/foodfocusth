@@ -42,3 +42,31 @@
     }
   }
 }
+
+.ads-carousel {
+  
+  .ads-group {
+    ul {
+      display: table;
+      width: 100%;
+      background: white;
+      li {
+        display: table-cell;
+      }
+    }
+    a {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    img {
+      max-width: 100px;
+      height: auto;
+    }
+  }
+
+  @media @from-mobile {
+    .ads-group img {      
+      width: 90%;
+    }
+  }
+}
