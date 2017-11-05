@@ -36,23 +36,26 @@ block container
             h2.title-primary.light.mar-bot CALENDAR
           .col-md-7.col-sm-12
             form
-              .form-group.mar-top-xs
+              .row
                 label.title-uppercase DATE:
-                select.form-control.half
-                  option(value="0") ALL
-                  option(value="1") November
-                  option(value="2") October
-                select.form-control.half
-                  option(value="2017") 2017
-                  option(value="2016") 2016
-                  option(value="2015") 2015
-              .form-group.mar-top-xs
+                .form-group.half.mar-top-xs
+                  select.form-control
+                    option(value="0") ALL
+                    option(value="1") November
+                    option(value="2") October
+                .form-group.half
+                  select.form-control
+                    option(value="2017") 2017
+                    option(value="2016") 2016
+                    option(value="2015") 2015
+              .row
                 label.title-uppercase LOCATION:
-                select.form-control
-                  option(value="0") ALL
-                  option(value="1") Option 1
-                  option(value="2") Option 2
-                  option(value="3") Option 3
+                .form-group.mar-top-xs
+                  select.form-control
+                    option(value="0") ALL
+                    option(value="1") Option 1
+                    option(value="2") Option 2
+                    option(value="3") Option 3
           .col-xs-12
             p.text-large.txt-black.mar-bot NOVEMBER
             ul
