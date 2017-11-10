@@ -3,9 +3,9 @@ include ../mixins/all
 nav.global-nav.hidden-xs.hidden-sm
   ul
     li
-      +link('Home')
+      +link('Home','/')
     li.has-sub
-      +link('About Us').link-sub
+      +link('About Us','about-us.html').link-sub
       .mega-menu
         .menu-wrap
           .inner-menu
@@ -25,18 +25,18 @@ nav.global-nav.hidden-xs.hidden-sm
                 li: +link('Food Focus Thailand Magazine')
                 li: +link('Special Supplement')
     li.has-sub
-      +link('Events').link-sub
+      +link('Events','event-exhibition.html').link-sub
       .mega-menu
         .menu-wrap
           .inner-menu
             .level-1
               ul
-                li: +link('Food Focus Roadmap')
+                li: +link('Food Focus Roadmap','roadmap-detail.html')
                 li: +link('Food Focus Roadshow')
                 li: +link('Seminar & Conference')
                 li: +link('Exhibition')
     li.has-sub
-      +link('Services').link-sub
+      +link('Services','services.html').link-sub
       .mega-menu.image
         .menu-wrap
           .inner-menu
