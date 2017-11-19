@@ -68,6 +68,19 @@
         }
       }
     }
+
+    &.blue {
+      &.active {
+        background-color: @blue-color;
+        
+      }
+      .no-touch.desktop & {
+        &:hover {
+          background-color: @blue-color;
+        }
+      }
+
+    }
   }
   .magazine {
     h3 {
@@ -91,5 +104,13 @@
   }
   > .inner {
     display: none;
+  }
+}
+
+[data-tab-content].magazine-tab-content {
+  @media @from-tablet-portrait {
+    .row {
+      text-align: center;
+    }
   }
 }

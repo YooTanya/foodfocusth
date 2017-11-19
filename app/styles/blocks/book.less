@@ -1,27 +1,8 @@
 
-.row-centered {
-  text-align: center;
-  .roadmap {
-    margin: @grid 3rem;
-    @media @from-tablet-portrait {
-      margin: @m-grid 0;
-    }
-  }
-
-  &.narrow {
-    width: 60%;
-    margin: 0 auto;
-
-    @media @from-mobile {
-      width: 100%;
-    }
-  }
-}
-
-.roadmap {
-  width: 360px;
+.book {
+  width: 233px;
   display: inline-block;
-  margin: 60px 0;
+  margin: @grid-small 0;
   @media @from-mobile-375 {
     width: 320px;
   }
@@ -46,11 +27,7 @@
 
     .box-shadow-default();
     @media @only-desktop-lg {
-      height: @heightThumb!important;
-    }
-    
-    @media @from-mobile-small {
-      .calc(height, "100vw - 120px");
+      height: 300px!important;
     }
     background-size: cover;
     background-repeat: no-repeat;
@@ -69,11 +46,5 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-  }
-}
-
-.content-item {
-  .text {
-    font: 22px @font-thumb-normal;
   }
 }
