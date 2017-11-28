@@ -4,19 +4,10 @@ include ../mixins/all
   .outer-menu
     .collapse-item
       h3.collapse-header.no-content
-        +link('Home')
+        +link('Home','index.html')
     .collapse-item
-      h3.collapse-header
-        +link('About Us')
-      .collapse-inner
-        .mega-menu
-          .inner-menu
-            .level-1
-              ul
-                li: +link('About Company').level-1-title
-                li: +link('Endorsement').level-1-title
-                li: +link('Board of Consultants').level-1-title
-                li: +link('Advertisement').level-1-title
+      h3.collapse-header.no-content
+        +link('About Us','about-us.html')
     .collapse-item
       h3.collapse-header
         +link('Magazine')
@@ -27,10 +18,6 @@ include ../mixins/all
               ul
                 li: +link('Food Focus Thailand Magazine').level-1-title
                 li: +link('Special Supplement').level-1-title
-                li: +link('Food Focus Roadmap').level-1-title
-                li: +link('Food Focus Roadshow').level-1-title
-                li: +link('Seminar & Conference').level-1-title
-                li: +link('Exhibition').level-1-title
     .collapse-item
       h3.collapse-header
         +link('Events')
@@ -39,13 +26,13 @@ include ../mixins/all
           .inner-menu
             .level-1
               ul
-                li: +link('Food Focus Roadmap').level-1-title
-                li: +link('Food Focus Roadshow').level-1-title
-                li: +link('Seminar & Conference').level-1-title
+                li: +link('Food Focus Roadmap','roadmap.html').level-1-title
+                li: +link('Food Focus Roadshow','roadmap.html').level-1-title
+                li: +link('Seminar & Conference','roadmap.html').level-1-title
                 li: +link('Exhibition').level-1-title
     .collapse-item
       h3.collapse-header
-        +link('Services')
+        +link('Services','services.html')
       .collapse-inner
         .mega-menu
           .inner-menu

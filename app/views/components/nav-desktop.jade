@@ -3,18 +3,9 @@ include ../mixins/all
 nav.global-nav.hidden-xs.hidden-sm
   ul
     li
-      +link('Home')
-    li.has-sub
-      +link('About Us').link-sub
-      .mega-menu
-        .menu-wrap
-          .inner-menu
-            .level-1
-              ul
-                li: +link('About Company')
-                li: +link('Endorsement')
-                li: +link('Board of Consultants')
-                li: +link('Advertisement')
+      +link('Home','index.html')
+    li
+      +link('About Us','about-us.html')
     li.has-sub
       +link('Magazine').link-sub
       .mega-menu
@@ -31,12 +22,12 @@ nav.global-nav.hidden-xs.hidden-sm
           .inner-menu
             .level-1
               ul
-                li: +link('Food Focus Roadmap')
-                li: +link('Food Focus Roadshow')
-                li: +link('Seminar & Conference')
+                li: +link('Food Focus Roadmap','roadmap.html')
+                li: +link('Food Focus Roadshow','roadmap.html')
+                li: +link('Seminar & Conference','roadmap.html')
                 li: +link('Exhibition')
     li.has-sub
-      +link('Services').link-sub
+      +link('Services','services.html').link-sub
       .mega-menu.image
         .menu-wrap
           .inner-menu

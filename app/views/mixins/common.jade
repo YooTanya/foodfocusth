@@ -21,7 +21,7 @@ mixin banner-book-image(src, book, subtitle, title, content, issue)
         .inner-container
           .middle-block
             .book-img
-              +img(book)
+              +link-img(book,'')
             .desc
               h3.sub-title.sub-title-bg.txt-white #{subtitle}
               h2.intro.txt-white.mar-top #{title}
@@ -71,7 +71,7 @@ mixin roadmap(src, title, date)
   - if (typeof(title) === 'undefined') title = 'DRINKING EDITION'
   - if (typeof(date) === 'undefined') date = '10 NOVEMBER 2017'
     article.roadmap
-      +link().image(style="background-image: url("+src+");")
+      +link('','roadmap-detail.html').image(style="background-image: url("+src+");")
       .caption
         h2.title-1-thumb #{title}
         h2.title-1-thumb #{date}
