@@ -91,3 +91,20 @@ mixin profile(src, fullname, text1, text2, text3)
           p.text-x-small #{text2}
           p.text-x-small #{text3}
 
+mixin event(date, month, title, address, website)
+  - if (typeof(date) === 'undefined') date = '10'
+  - if (typeof(month) === 'undefined') month = 'Mar'
+  - if (typeof(title) === 'undefined') title = 'title'
+  - if (typeof(title) === 'undefined') title = 'address'
+  - if (typeof(title) === 'undefined') title = 'website'
+    +link().event
+      .event-date
+        h2.title.txt-black #{date}
+        p.text-medium.txt-black #{month}
+      .event-group
+        p
+          p.text-large.txt-black #{title}
+          p.text-mediumer.txt-black #{address}
+          p.text-medium.txt-black #{website}
+
+          

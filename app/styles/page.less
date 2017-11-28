@@ -1133,37 +1133,74 @@ table {
   }
 }
 
-.event {
-  display: block;
-  .size(100%);
-  .event-date {
-    position: absolute;
-  }
-  .event-group {
-    margin-left: 80px;
-    @media @from-mobile {
-      margin-left: 50px;
-    }
-    p {
-      line-height: 1.71;
-    }
-  }
+.custom-select {
+  &:extend(.input);
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
 
-  &.event-pdf {
-    a {
-      height: 80px;
-      display: table;
+  .custom-text {
+    overflow: hidden;
+    padding-right: 1.5rem;
+    span {
+      font-size: @font-medium;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
       width: 100%;
-      vertical-align: middle;
+      overflow: hidden;
+    }
 
-      span {
-        display: table-cell;
-        height: 100%;
-        vertical-align: middle;
-        padding-left: 40px;
-        position: relative;
-        line-height: 1.5;
+  }
+
+  &:after {
+    &:extend(.icon-dropdown:before);
+    &:extend([class^="icon-"]:before, [class*=" icon-"]:before );
+    color: black;
+    position: absolute;
+    right: @m-grid;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+  }
+  .no-touch.desktop & {
+    select {
+      display: none;
+    }
+    &:hover {
+      &:after {
+        animation: wobble-vertical 0.75s alternate;
       }
+    }
+  }
+  select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    padding: 1rem;
+    opacity: 0;
+  }
+  &.selected {
+    border-color: red;
+    .custom-text {
+      span {
+        
+      }
+    }
+  }
+  .error &{
+    border-color: @red-color;
+    .custom-text {
+      span {
+        color: @red-color;
+      }
+    }
+    &:after {
+      color: @red-color;
     }
   }
 }

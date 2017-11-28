@@ -44,7 +44,6 @@
 }
 
 .ads-carousel {
-  
   .ads-group {
     ul {
       display: table;
@@ -67,6 +66,31 @@
   @media @from-mobile {
     .ads-group img {      
       width: 90%;
+    }
+  }
+}
+
+.media-carousel-wrap {
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.media-carousel {
+  .item {
+    display: inline-block;
+    margin: 0 @grid;
+  }
+  a {
+    vertical-align: middle;
+  }
+  img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  @media @from-tablet-portrait {
+    .item {
+      margin: 0 @m-grid;
     }
   }
 }

@@ -44,7 +44,6 @@
       slidesToScroll: 1,
       dots: true
     });
-    
     $('.ads-carousel').slick({
       autoplay: true,
       infinite: true,
@@ -52,6 +51,44 @@
       slidesToScroll: 1,
       dots: false
     });    
+    $('.media-carousel').each(function(){
+      if($(this).find('.item').length > 6) {
+        $(this).slick({
+          autoplay: true,
+          infinite: true,
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          dots: false,
+          responsive: [{
+            breakpoint: 1024,
+            settings: {
+              infinite: true,
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              infinite: true,
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              infinite: true,
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              dots: false
+            }
+          }]
+        });
+      }
+    });
     $('.carousel').each(function() {
       if($(this).find('.item').length > 3) {
         $(this).slick({

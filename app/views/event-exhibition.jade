@@ -1,0 +1,75 @@
+extends layouts/layout
+
+block vars
+  -title = 'Event & Exhibition'
+  -bodyClass = ''
+
+
+block container
+  section.banner-wrap
+    +banner('images/upload/magazine-bg.jpeg', 'EVENT & EXHIBITION', '')
+  .wrapper
+    .outer
+      .inner-container
+        .row
+          .col-xs-12
+            h2.title-primary.light.mar-bot MEDIA PARTNERS
+            section.media-carousel-wrap
+              ul.media-carousel
+                li.item 
+                  +link-img('images/upload/p-1.png','#')
+                li.item 
+                  +link-img('images/upload/p-2.png','#')
+                li.item 
+                  +link-img('images/upload/p-1.png','#')
+                li.item 
+                  +link-img('images/upload/p-2.png','#')
+                li.item 
+                  +link-img('images/upload/p-1.png','#')
+                li.item 
+                  +link-img('images/upload/p-2.png','#')
+
+    .outer(style="background-color: #dddddd;")
+      .inner-container
+        .row
+          .col-md-5
+            h2.title-primary.light.mar-bot CALENDAR
+          .col-md-7.col-sm-12
+            form
+              .row
+                label.title-uppercase DATE:
+                .form-group.half.mar-top-xs
+                  select.form-control
+                    option(value="all") ALL
+                    option(value="nov") November
+                    option(value="oct") October
+                .form-group.half
+                  select.form-control
+                    option(value="2017") 2017
+                    option(value="2016") 2016
+                    option(value="2015") 2015
+              .row
+                label.title-uppercase LOCATION:
+                .form-group.mar-top-xs
+                  select.form-control
+                    option(value="0") ALL
+                    option(value="1") Option 1
+                    option(value="2") Option 2
+                    option(value="3") Option 3
+          .col-xs-12
+            p.text-large.txt-black.mar-bot NOVEMBER
+            ul
+              li: +event('5', 'NOV', 'BEVREC THAILAND 2017', 'Bangkok, Thailand', 'www.bevrecthailand.com')
+              li: +event('12-14', 'NOV', 'BEVREC THAILAND 2017', 'Bangkok, Thailand', 'www.bevrecthailand.com')
+              li: +event('19', 'NOV', 'BEVREC THAILAND 2017', 'Bangkok, Thailand', 'www.bevrecthailand.com')
+              li: +event('20-28', 'NOV', 'BEVREC THAILAND 2017', 'Bangkok, Thailand', 'www.bevrecthailand.com')
+          .col-xs-12
+            p.text-large.txt-black.mar-bot OCTOBER
+            ul
+              li: +event('5', 'OCT', 'BEVREC THAILAND 2017', 'Bangkok, Thailand', 'www.bevrecthailand.com')
+              li: +event('12-14', 'OCT', 'BEVREC THAILAND 2017', 'Bangkok, Thailand', 'www.bevrecthailand.com')
+              li: +event('19', 'OCT', 'BEVREC THAILAND 2017', 'Bangkok, Thailand', 'www.bevrecthailand.com')
+              li: +event('20-28', 'OCT', 'BEVREC THAILAND 2017', 'Bangkok, Thailand', 'www.bevrecthailand.com')
+
+
+
