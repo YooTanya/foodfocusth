@@ -7,14 +7,14 @@ nav.global-nav.hidden-xs.hidden-sm
     li
       +link('About Us','about-us.html')
     li.has-sub
-      +link('Magazine').link-sub
+      +link('Magazine','magazine.html').link-sub
       .mega-menu
         .menu-wrap
           .inner-menu
             .level-1
               ul
-                li: +link('Food Focus Thailand Magazine')
-                li: +link('Special Supplement')
+                li: +link('Food Focus Thailand Magazine','magazine.html')
+                li: +link('Special Supplement','magazine.html')
     li.has-sub
       +link('Events','event-exhibition.html').link-sub
       .mega-menu
@@ -25,7 +25,7 @@ nav.global-nav.hidden-xs.hidden-sm
                 li: +link('Roadmap','roadmap.html')
                 li: +link('Roadshow','roadmap.html')
                 li: +link('Seminar & Conference','roadmap.html')
-                li: +link('Exhibition')
+                li: +link('Exhibition','event-exhibition.html')
     li.has-sub
       +link('Services','services.html').link-sub
       .mega-menu.image
@@ -37,5 +37,5 @@ nav.global-nav.hidden-xs.hidden-sm
                 li: +life-stage('images/icons/ic-search.svg','Anniversary & Annual Report')
                 li: +life-stage('images/icons/ic-search.svg','Company Profile & Product Catalogue')
                 li: +life-stage('images/icons/ic-search.svg','Event Organizer')
-    li: +link('Contact Us')
+    li: +link('Contact Us','contact-us.html')
 
