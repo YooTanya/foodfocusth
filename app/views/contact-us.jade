@@ -1,0 +1,56 @@
+extends layouts/layout
+
+block vars
+  -title = 'Contact us'
+  -bodyClass = ''
+
+
+block container
+  .wrapper.pad-top-lg.pad-bot-lg
+    .inner-container
+      .row
+        .col-sm-12
+          h2.title.light.mar-bot CONTACT US
+        .col-md-6.col-sm-12
+          .contact-location.mar-bot
+            +img('images/upload/maps.jpg')
+        .col-md-6.col-sm-12
+          .contact-location.mar-bot
+            iframe(width="555" height="438", src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC0mPfoxxoOS47lyK2KlWQNiMFTKV-CPeA&q=DNCC+Wonderland, Shyamoli,+Shishu+Mela,+Dhaka,+Bangladesh", frameborder="0", allowfullscreen)
+      .row-centered.pad-top-lg
+        article.contact-us
+          .item
+            .inner
+              +img('images/icons/ic-location.png')
+            .desc
+              span.title-1-thumb Be Media Focus (Thailand) Co., Ltd.
+              span.title-1-thumb 5/38 Soi Ngamwongwan 25 Yak 26,
+              span.title-1-thumb Bangkhen, Muang Nonthaburi,
+              span.title-1-thumb Nonthaburi 11000 Thailand
+          .item
+            .inner
+              +img('images/icons/ic-phone.png')
+            .desc
+              span.title-1-thumb +66 2192 9598
+              span.title-1-thumb +66 2116 5738
+          .item
+            .inner
+              +img('images/icons/ic-email.png')
+            .desc
+              span.title-1-thumb 
+                strong Advertising Enquiries
+              span.title-1-thumb sales@foodfocusthailand.com
+              span.title-1-thumb 
+                strong Editorial Enquiries
+              span.title-1-thumb editor@fooddocusthailand.com
+              span.title-1-thumb 
+                strong Seminar Enquiries
+              span.title-1-thumb seminar@foodfocusthailand.com
+              span.title-1-thumb 
+                strong Subscription Enquiries
+              span.title-1-thumb contact@foodfocusthailand.com
+
+    
+
+
+
