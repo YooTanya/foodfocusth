@@ -92,17 +92,28 @@
     $('.carousel').each(function() {
       if($(this).find('.item').length > 3) {
         $(this).slick({
-          autoplay: true,
+          autoplay: false,
           mobileFirst: true,
           variableWidth: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
           responsive: [{
               breakpoint: 768,
               settings: {
                 infinite: true,
-                slidesToShow: 3,
-                centerMode: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
                 dots: false
               }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              infinite: true,
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              dots: false
+            }
           }]
         });
       }
