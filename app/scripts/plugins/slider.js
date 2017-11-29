@@ -92,7 +92,7 @@
     $('.carousel').each(function() {
       if($(this).find('.item').length > 3) {
         $(this).slick({
-          autoplay: false,
+          autoplay: true,
           mobileFirst: true,
           variableWidth: true,
           slidesToShow: 4,
