@@ -3,7 +3,17 @@
   .middle-block {
     position: relative;
   }
-  
+  .banner-carousel  {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.1s ease;
+    -webkit-transition: opacity 0.1s ease;
+  }
+  .banner-carousel.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+  }
+
   h3.sub-title {
     font-size: 14px;
     display: inline-block;
