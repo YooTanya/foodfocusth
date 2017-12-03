@@ -14,31 +14,31 @@ block container
         .col-sm-12
           section.default-tab(data-tab)
             .row(data-tab-header)
-              +link('','#2017').active.col 
+              +link('','#2018').active.col 
+                h3.title-primary.light 2018
+              +link('','#2017').col
                 h3.title-primary.light 2017
               +link('','#2016').col
                 h3.title-primary.light 2016
               +link('','#2015').col
                 h3.title-primary.light 2015
-              +link('','#2014').col
-                h3.title-primary.light 2014
             section(data-tab-content)
-              .inner#2017.active
+              .inner#2018.active
                 +roadmap()
                 +roadmap()
                 +roadmap()
                 +roadmap()
+              .inner#2017
+                +roadmap('images/upload/thumb-2.jpg')
+                +roadmap('images/upload/thumb-2.jpg')
+                +roadmap('images/upload/thumb-2.jpg')
+                +roadmap('images/upload/thumb-2.jpg')
               .inner#2016
-                +roadmap('images/upload/thumb-2.jpg')
-                +roadmap('images/upload/thumb-2.jpg')
-                +roadmap('images/upload/thumb-2.jpg')
-                +roadmap('images/upload/thumb-2.jpg')
+                +roadmap()
+                +roadmap()
+                +roadmap()
+                +roadmap()
               .inner#2015
-                +roadmap()
-                +roadmap()
-                +roadmap()
-                +roadmap()
-              .inner#2014
                 +roadmap('images/upload/thumb-2.jpg')
                 +roadmap('images/upload/thumb-2.jpg')
                 +roadmap('images/upload/thumb-2.jpg')

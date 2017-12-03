@@ -28,14 +28,14 @@ nav.global-nav.hidden-xs.hidden-sm
                 li: +link('Exhibition','event-exhibition.html')
     li.has-sub
       +link('Services','services.html').link-sub
-      .mega-menu.image
+      .mega-menu
         .menu-wrap
           .inner-menu
-            .level-1.life-stage
+            .level-1
               ul
-                li: +life-stage('images/icons/ic-search.svg','Contract Publication')
-                li: +life-stage('images/icons/ic-search.svg','Anniversary & Annual Report')
-                li: +life-stage('images/icons/ic-search.svg','Company Profile & Product Catalogue')
-                li: +life-stage('images/icons/ic-search.svg','Event Organizer')
+                li: +link('Contract Publication')
+                li: +link('Anniversary & Annual Report')
+                li: +link('Company Profile & Product Catalogue')
+                li: +link('Event Organizer')
     li: +link('Contact Us','contact-us.html')
 
