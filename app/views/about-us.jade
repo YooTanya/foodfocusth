@@ -9,7 +9,7 @@ block container
   section.banner-wrap
     +banner('images/upload/magazine-bg.jpeg','ABOUT US','ยูวีวิลล์คอร์ปแทงโก้ เทียมทาน แพ็คครัวซองต์วิภัชภาค โคโยตี้อิเลียดสุนทรีย์ซิมโฟนีคาวบอย เพนตากอนสเตชันนินจา ชีสอินดอร์แฟนตาซีตุ๋ยแพทยสภา วันเวย์ไนท์วาริชศาสตร์ ตอกย้ำสถาปัตย์มาร์เก็ตสมาพันธ์ อีแต๋น ไทเฮาเวิร์กบ๊วยนอร์ท หยวนโมเต็ลแฟนตาซีบอมบ์ บาลานซ์ ไอติมวิวอวอร์ดเต๊ะ เทคพุทโธ เบลอสปาแคมเปญมวลชนสเตชั่น เฝอมินท์')
   section.services-tab(data-tab).pad-top-lg
-    .row-centered.narrow(data-tab-header)
+    .row-centered.narrow(data-tab-header, data-activeByHash="true")
       +link('','#advertiser').col.active
         h3.title-2.light ADVERTISER
       +link('','#board').col
