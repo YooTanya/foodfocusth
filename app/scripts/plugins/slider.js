@@ -45,7 +45,7 @@
       dots: true
     });
     $('.ads-carousel').slick({
-      autoplay: true,
+      autoplay: false,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
