@@ -13,8 +13,8 @@ nav.global-nav.hidden-xs.hidden-sm
               ul
                 li: +link('About Company')
                 li: +link('Endorsement')
-                li: +link('Board of Consultants')
-                li: +link('Advertisement')
+                li: +link('Board of Consultants', 'about-us.html#board')
+                li: +link('Advertisement','about-us.html#advertiser')
     li.has-sub
       +link('Magazine').link-sub
       .mega-menu
@@ -42,9 +42,9 @@ nav.global-nav.hidden-xs.hidden-sm
           .inner-menu
             .level-1.life-stage
               ul
-                li: +life-stage('images/icons/ic-search.svg','Contract Publication')
-                li: +life-stage('images/icons/ic-search.svg','Anniversary & Annual Report')
-                li: +life-stage('images/icons/ic-search.svg','Company Profile & Product Catalogue')
-                li: +life-stage('images/icons/ic-search.svg','Event Organizer')
+                li: +life-stage('images/icons/ic-search.svg','Contract Publication','services.html#publication')
+                li: +life-stage('images/icons/ic-search.svg','Anniversary & Annual Report','services.html#annual-report')
+                li: +life-stage('images/icons/ic-search.svg','Company Profile & Product Catalogue','services.html#catalog')
+                li: +life-stage('images/icons/ic-search.svg','Event Organizer','services.html#event')
     li: +link('Contact Us')
 
