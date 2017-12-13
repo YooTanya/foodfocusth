@@ -1,0 +1,46 @@
+extends ../../layouts/layout
+
+block vars
+  -title = 'Drinking Edition 2015 - Roadmap Detail'
+  -bodyClass = ''
+
+
+block container
+  section.content.pad-top-lg.pad-bot-lg
+    .inner-container
+      .row
+        .col-md-1.hidden-xs.hidden-sm
+          ul.list-icons.pad-top-lg(data-stickyScroll)
+            li: +link-img('../../images/icons/ic-fb.svg','#')
+            li: +link-img('../../images/icons/ic-twitter.svg','#')
+            li: +link-img('../../images/icons/ic-linkedin.svg','#')
+
+        .col-md-8.col-sm-12
+          h3.sub-title-bg.txt-white ROADMAP
+          .content-header.mar-top
+            span.title.light.txt-black DRINKING EDITION 2015
+            span.title-3.light.txt-black.mar-left 30 OCTOBER 2015
+          .content-body
+            +img('../../images/upload/Drink_2015.jpg').mar-top-md.mar-bot-md
+            p.text-medium อัพเดทข้อมูลสำหรับอุตสาหกรรมเครื่องดื่มโดยเฉพาะ ทั้งในด้านกฎหมาย เทรนด์ เทคโนโลยีในกระบวนการแปรรูปและการบรรจุเครื่องดื่ม รวมทั้งสารผสมอาหารที่น่าสนใจสำหรับการพัฒนาผลิตภัณฑ์เครื่องดื่ม
+            p.text-medium.mar-top The seminar has provided update information for the beverage industry, in terms of laws, trends, and processing & packaging technology, including novel food ingredients for R&D concept. 
+
+        .col-sm-12.hidden-md-up
+          ul.list-icons
+            li: +link-img('../../images/icons/ic-fb.svg','#')
+            li: +link-img('../../images/icons/ic-twitter.svg','#')
+            li: +link-img('../../images/icons/ic-linkedin.svg','#')
+        .col-md-3.col-xs-12
+          .col-sm-12
+            h2.title Other Events
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('/images/upload/Chill_2015.jpg', 'Chilled & Frozen Products Edition')
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('/images/upload/Retail_2015.jpg', 'F&B Retail Edition')
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('/images/upload/Meat_2015.jpg', 'Meat & Poultry Edition')
+
+      

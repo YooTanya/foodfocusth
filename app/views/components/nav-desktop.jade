@@ -3,9 +3,18 @@ include ../mixins/all
 nav.global-nav.hidden-xs.hidden-sm
   ul
     li
-      +link('Home','index.html')
-    li
-      +link('About Us','about-us.html')
+      +link('Home','/index.html')
+    li.has-sub
+      +link('About Us','/about-us.html').link-sub
+      .mega-menu
+        .menu-wrap
+          .inner-menu
+            .level-1
+              ul
+                li: +link('About Company')
+                li: +link('Endorsement')
+                li: +link('Board of Consultants', '/about-us.html#board')
+                li: +link('Advertisement','/about-us.html#advertiser')
     li.has-sub
       +link('Magazine','magazine.html').link-sub
       .mega-menu
@@ -13,19 +22,19 @@ nav.global-nav.hidden-xs.hidden-sm
           .inner-menu
             .level-1
               ul
-                li: +link('Food Focus Thailand Magazine','magazine.html')
-                li: +link('Special Supplement','magazine.html')
+                li: +link('Food Focus Thailand Magazine','/magazine.html')
+                li: +link('Special Supplement','/magazine.html')
     li.has-sub
-      +link('Events','event-exhibition.html').link-sub
+      +link('Events','/event-exhibition.html').link-sub
       .mega-menu
         .menu-wrap
           .inner-menu
             .level-1
               ul
-                li: +link('Roadmap','roadmap.html')
-                li: +link('Roadshow','roadmap.html')
-                li: +link('Seminar & Conference','roadmap.html')
-                li: +link('Exhibition','event-exhibition.html')
+                li: +link('Roadmap','/roadmap.html')
+                li: +link('Roadshow','/roadshow.html')
+                li: +link('Seminar & Conference','/roadmap.html')
+                li: +link('Exhibition','/event-exhibition.html')
     li.has-sub
       +link('Services','services.html').link-sub
       .mega-menu
@@ -33,9 +42,9 @@ nav.global-nav.hidden-xs.hidden-sm
           .inner-menu
             .level-1
               ul
-                li: +link('Contract Publication')
-                li: +link('Anniversary & Annual Report')
-                li: +link('Company Profile & Product Catalogue')
-                li: +link('Event Organizer')
-    li: +link('Contact Us','contact-us.html')
+                li: +link('Contract Publication','/services.html#publication')
+                li: +link('Anniversary & Annual Report','/services.html#annual-report')
+                li: +link('Company Profile & Product Catalogue','/services.html#catalog')
+                li: +link('Event Organizer','/services.html#event')
+    li: +link('Contact Us','/contact-us.html')
 

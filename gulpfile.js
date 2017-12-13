@@ -21,7 +21,7 @@ var config = {
 // build jade
 
 gulp.task('jade', function(){
-  gulp.src(config.views + '/*.jade')
+  gulp.src(config.views + '/**/*.jade')
     .pipe(jade({
       pretty: true
     }))

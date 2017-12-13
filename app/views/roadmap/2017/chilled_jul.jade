@@ -1,0 +1,46 @@
+extends ../../layouts/layout
+
+block vars
+  -title = 'Chilled & Frozen Products Edition 2017 - Roadmap Detail'
+  -bodyClass = ''
+
+
+block container
+  section.content.pad-top-lg.pad-bot-lg
+    .inner-container
+      .row
+        .col-md-1.hidden-xs.hidden-sm
+          ul.list-icons.pad-top-lg(data-stickyScroll)
+            li: +link-img('../../images/icons/ic-fb.svg','#')
+            li: +link-img('../../images/icons/ic-twitter.svg','#')
+            li: +link-img('../../images/icons/ic-linkedin.svg','#')
+
+        .col-md-8.col-sm-12
+          h3.sub-title-bg.txt-white ROADMAP
+          .content-header.mar-top
+            span.title.light.txt-black CHILLED & FROZEN PRODUCTS EDITION 2017
+            span.title-3.light.txt-black.mar-left 7 JULY 2017
+          .content-body
+            +img('../../images/upload/Chill_2017.jpg').mar-top-md.mar-bot-md
+            p.text-medium ข้อมูลจาก Euromonitor International ระบุว่าตลาดอาหารแช่แข็งในประเทศไทยในปี 2558 มีมูลค่า 15,700 ล้านบาท และมีอัตราการเติบโตต่อเนื่องเฉลี่ยร้อยละ 6.0 ต่อปี และคาดการณ์ว่าในปี 2562 จะมีมูลค่าตลาดอยู่ที่ประมาณ 19,902 ล้านบาท ทั้งนี้ ปัจจัยที่มีผลต่อตลาดอาหารแช่แข็ง ได้แก่ รูปแบบการดำเนินชีวิตของคนเมืองที่เน้นความสะดวก รวดเร็ว ตลอดจนอาหารแช่แข็งในปัจจุบันมีคุณภาพและมาตรฐานที่ใกล้เคียงอาหารที่ปรุงเสร็จใหม่ๆ มากขึ้นกว่าในอดีต นอกจากนี้ยังมีความสะดวกในการเลือกซื้อ และมีการพัฒนาผลิตภัณฑ์ที่ตรงใจเพื่อผู้บริโภค อย่างไรก็ตาม อาหารแช่แข็งยังคงมีข้อจำกัดในด้านอายุการเก็บรักษา รสชาติและคุณค่าทางอาหารที่ยังคงต้องพัฒนาให้ใกล้เคียงกับอาหารแช่เย็นและอาหารปรุงเสร็จใหม่ๆ ให้มากขึ้น 
+            p.text-medium.mar-top According to the Euromonitor International, the market value of frozen food in Thailand was worth THB 15.7 billion in 2015, which has grown continuously by 6% per year. It is expected that the market value will be increased to THB 19.9 billion in 2019. Factors that influence on frozen food market are included people lifestyle, which are now focusing on the fast-moving urbanites, whereas today's frozen foods have quality and standard that is close to freshly cooked food. Moreover, frozen food is also easy to find, while food producers always develop new products to serve demand of consumers. However, frozen foods still have limited storage shelf life, taste and nutritional that still needs to be developed to be as close as chilled and freshly cooked food.
+
+        .col-sm-12.hidden-md-up
+          ul.list-icons
+            li: +link-img('../../images/icons/ic-fb.svg','#')
+            li: +link-img('../../images/icons/ic-twitter.svg','#')
+            li: +link-img('../../images/icons/ic-linkedin.svg','#')
+        .col-md-3.col-xs-12
+          .col-sm-12
+            h2.title Other Events
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('../../images/upload/Meat_2017.jpg', 'Meat & Poultry Edition')
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('../../images/upload/Drink_2017.jpg', 'Drinking Edition')
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('../../images/upload/Functional_2017.jpg', 'Functional F&B Edition')
+
+      
