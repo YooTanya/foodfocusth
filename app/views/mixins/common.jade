@@ -34,11 +34,11 @@ mixin banner-book-image(src, book, subtitle, title, content, issue)
               .subscribe.mar-top
                 a(href='https://goo.gl/forms/oP25aDCXWbNASbXh2', target="_blank").txt-mediumer SUBSCRIBE TO NEWSLETTER
 
-mixin story(src, title, content)
+mixin story(src, title, content,href)
   - if (typeof(src) === 'undefined') src = '/images/upload/photo-md-15.jpg'
   - if (typeof(title) === 'undefined') title = 'Opportunities In Volatile Markets'
   - if (typeof(content) === 'undefined') content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempo.'
-    +link().story
+    +link(title, href).story
       .thumb(style="background-image: url("+src+");")
       .caption
         .desc
@@ -46,10 +46,10 @@ mixin story(src, title, content)
             h2.title-1-thumb #{title}
           p.text-mediumer-thumb #{content}
 
-mixin product(src, title)
+mixin product(src, title, href)
   - if (typeof(src) === 'undefined') src = '/images/upload/thumb-1.jpg'
   - if (typeof(title) === 'undefined') title = 'Your Personal Needs'
-    +link().product.thumb-default
+    +link(title,href).product.thumb-default
       figure
         .thumb(style="background-image: url("+src+")")
       figcaption
