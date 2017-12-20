@@ -1,0 +1,35 @@
+extends ../../layouts/layout
+
+block vars
+  -title = 'USHARE NOV 2017'
+  -bodyClass = ''
+
+
+block container
+  section.content.pad-top-lg.pad-bot-lg
+    .inner-container
+      .row
+        .col-md-1.hidden-xs.hidden-sm
+
+        .col-md-8.col-sm-12
+          h3.sub-title-bg.txt-white USHARE
+          .content-header.mar-top
+            span.title.light.txt-black USHARE NOV 2017
+            span.title-3.light.txt-black.mar-left
+          .content-body
+            +img('/images/upload/Ushare_Nov.jpg').mar-top-md.mar-bot-md
+            p.text-medium U Share V Care เดือนพฤศจิกายน  2560 ลุ้นรับ Smart T –Shirt By Food Focus Thailand  3  รางวัล
+            p.text-medium.mar-top ลุ้นรางวัลกับเราได้ตามลิงก์ด้านล่างเลย อย่าลืมกรอกให้ครบ... นะคะ
+            p.text-medium.mar-top
+              a(href="https://goo.gl/forms/tQS3Z2Ih8gsnQ7T73", target="_blank") https://goo.gl/forms/tQS3Z2Ih8gsnQ7T73
+            
+
+
+        .col-sm-12.hidden-md-up
+          ul.list-icons
+            li: +link-img('/images/icons/ic-fb.svg','#')
+            li: +link-img('/images/icons/ic-twitter.svg','#')
+            li: +link-img('/images/icons/ic-linkedin.svg','#')
+        .col-md-3.col-xs-12
+
+      

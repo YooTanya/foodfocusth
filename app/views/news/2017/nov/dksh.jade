@@ -1,0 +1,38 @@
+extends ../../../layouts/layout
+
+block vars
+  -title = 'ดีเคเอสเอช ประเทศไทย เน้นให้การเรียนรู้เกี่ยวกับทักษะการใช้ชีวิตแก่เด็กนักเรียน'
+  -bodyClass = ''
+
+
+block container
+  section.content.pad-top-lg.pad-bot-lg
+    .inner-container
+      .row
+        .col-md-1.hidden-xs.hidden-sm
+
+        .col-md-8.col-sm-12
+          h3.sub-title-bg.txt-white NEWS
+          .content-header.mar-top
+            span.title.light.txt-black ดีเคเอสเอช ประเทศไทย เน้นให้การเรียนรู้เกี่ยวกับทักษะการใช้ชีวิตแก่เด็กนักเรียน
+            span.title-3.light.txt-black.mar-left
+          .content-body
+            +img('/images/upload/news_2.jpg').mar-top-md.mar-bot-md
+            p.text-medium 
+              b ดีเคเอสเอช ประเทศไทย เน้นให้การเรียนรู้เกี่ยวกับทักษะการใช้ชีวิตแก่เด็กนักเรียน ใน จ.สุราษฏ์ธานี ผ่านกิจกรรม ‘วันเล่น’
+            p.text-medium.mar-top 
+              b 27 กันยายน 2560, กรุงเทพฯ – 
+              span เด็กนักเรียนจำนวน 90 คน ได้เรียนรู้เกี่ยวกับความสำคัญของการทำงานร่วมกัน การจัดการด้านอารมณ์ การตั้งเป้าหมาย รวมทั้งทักษะการใช้ชีวิตอื่น ๆ ผ่านกิจกรรม “วันเล่น” หรือ Play Day ซึ่งจัดโดยบริษัทดีเคเอสเอช  กิจกรรมนี้เป็นส่วนหนึ่งของการรณรงค์เพื่อพัฒนาชีวิตของเด็กไทยภายใต้ธีม “ร่วมเป็นส่วนหนึ่งของชีวิตคนไทย ตั้งแต่ปี พ.ศ. 2449”  หลังจากมีการจัดกิจกรรม “วันเล่น” ณ จังหวัดพระนครศรีอยุธยา สมุทรปราการ และเชียงใหม่ รวมทั้ง งานเพื่อการกุศล หรือ DKSH Charity Day ณ กรุงเทพมหานคร พนักงานของเรากว่า 11,000 คนและคู่ค้าทางธุรกิจได้มีส่วนร่วมในการจัดกิจกรรมที่มีประโยชน์นี้อย่างต่อเนื่องทั่วประเทศ
+            p.text-medium.mar-top
+              a(href="http://www.dksh.com", target="_blank") www.dksh.com
+            
+
+
+        .col-sm-12.hidden-md-up
+          ul.list-icons
+            li: +link-img('/images/icons/ic-fb.svg','#')
+            li: +link-img('/images/icons/ic-twitter.svg','#')
+            li: +link-img('/images/icons/ic-linkedin.svg','#')
+        .col-md-3.col-xs-12
+
+      
