@@ -32,7 +32,7 @@ mixin banner-book-image(src, book, subtitle, title, content, issue)
                   p.sub-title.txt-white LATEST ISSUE
                   p.sub-title-2.txt-white #{issue}
               .subscribe.mar-top
-                a.txt-mediumer SUBSCRIBE TO NEWSLETTER
+                a(href='https://goo.gl/forms/oP25aDCXWbNASbXh2', target="_blank").txt-mediumer SUBSCRIBE TO NEWSLETTER
 
 mixin story(src, title, content)
   - if (typeof(src) === 'undefined') src = '/images/upload/photo-md-15.jpg'
