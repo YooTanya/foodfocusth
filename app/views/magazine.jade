@@ -12,9 +12,10 @@ block container
     .row-centered.narrow(data-tab-header, data-activeByHash="true")
       +link-img('images/upload/logo-foodfocus.png','','#foodfocus').col.blue.active
       +link-img('images/upload/logo-specialsup.png','','#specialsup').col.blue
+    .row-centered.narrow
       h2.title-primary-thumb.mar-bot-md.mar-top-md SUBSCRIBE FOR FREE 
         span
-          u: +link('CLICK HERE','https://goo.gl/forms/oP25aDCXWbNASbXh2').txt-black
+          +link('CLICK HERE','https://goo.gl/forms/oP25aDCXWbNASbXh2').txt-black
     section(data-tab-content).magazine-tab-content.pad-bot-lg
       .inner#foodfocus.active
         .inner-container
