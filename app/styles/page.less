@@ -9,9 +9,6 @@
 }
 
 .life-stage {
-  padding: 25px 0;
-  border-radius: 4px;
-  .box-shadow-default();
   @media @from-mobile {
     padding: 5px 0;
   }
@@ -35,14 +32,16 @@
     .text {
       font: @font-medium @font-family-light;
       color: black;
-      display: block;
+      display: none;
       margin-top: 10px;
       word-wrap: break-word;
     }
     .visual-img {
       position: relative;
       display: inline-block;
-      height: 52px;
+      img {
+        height: 120px;
+      }
     }
     @media @from-tablet-portrait {
       overflow: hidden;
