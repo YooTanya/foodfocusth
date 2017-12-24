@@ -74,7 +74,7 @@ mixin book(src, title, date, href)
   - if (typeof(title) === 'undefined') title = 'NO. 123'
   - if (typeof(date) === 'undefined') date = 'OCTOBER 2017'
     article.book
-      +link('',href).image(style="background-image: url("+src+");")
+      +link-img(src,'',href)
       .caption
         h2.title-1-thumb #{title}
         h2.title-1-thumb #{date}
