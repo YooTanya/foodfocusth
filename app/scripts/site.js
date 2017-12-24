@@ -100,4 +100,26 @@ $(document).ready(function() {
   FFC.init();
   FFC.megaMenu();
   FFC.tab();
+
+  $('.subscribe-btn').click(function(){
+    var email = $('input[name=emailInput]').val();
+
+    if(email != ''){
+      $.ajax({
+           type: "POST",
+           url: "http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/email.php",
+           data: {email: email},
+           dataType: "text"
+      }).done(function(res){
+        if(res == 1){
+          alert('Thank you for subscribing to our newsletter');
+        }else{
+          alert('Please refresh the page and try again. Sorry for the inconvenience');
+        }
+      });
+    }else{
+      alert('Email is empty. Please enter');
+    }
+  })
+
 });

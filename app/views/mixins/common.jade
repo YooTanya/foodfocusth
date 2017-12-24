@@ -31,8 +31,11 @@ mixin banner-book-image(src, book, subtitle, title, content, issue)
                 .latest-issue-content.mar-top
                   p.sub-title.txt-white LATEST ISSUE
                   p.sub-title-2.txt-white #{issue}
-              .subscribe.mar-top
-                a(href='https://goo.gl/forms/oP25aDCXWbNASbXh2', target="_blank").txt-mediumer SUBSCRIBE TO NEWSLETTER
+              div.mar-top
+                form.subscribe-form
+                  input(type="email", placeholder="Email", name="emailInput").form-control 
+                  .subscribe
+                    a.txt-mediumer.subscribe-btn SUBSCRIBE TO NEWSLETTER
 
 mixin story(src, title, content,href)
   - if (typeof(src) === 'undefined') src = 'http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/photo-md-15.jpg'
@@ -92,7 +95,7 @@ mixin profile(src, fullname, text1, text2, text3)
   - if (typeof(fullname) === 'undefined') fullname = 'VISIT LIMPRANA'
   - if (typeof(text1) === 'undefined') text1 = 'HONORARY ADVISOR'
   - if (typeof(text2) === 'undefined') text2 = 'FOOD PROCESSING INDUSTRY CLUB'
-  - if (typeof(text3) === 'undefined') text3 = 'THE FEDERATION OF THAI INDUSTRIES'
+  - if (typeof(text3) === 'undefined') text3 = ''
     .profile
       .thumb(style="background-image:url("+src+")")
       .profile-detail
