@@ -109,10 +109,12 @@ $(document).ready(function() {
            type: "POST",
            url: "http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/email.php",
            data: {email: email},
-           dataType: "text"
+           dataType: "json"
       }).done(function(res){
-        if(res == 1){
+        console.log(res);
+        if(res.success){
           alert('Thank you for subscribing to our newsletter');
+          $('input[name=emailInput]').val("");
         }else{
           alert('Please refresh the page and try again. Sorry for the inconvenience');
         }
