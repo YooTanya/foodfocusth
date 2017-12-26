@@ -1,27 +1,28 @@
 mixin banner(src, title, content)
-  - if (typeof(src) === 'undefined') src = 'http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/magazine-bg.jpeg'
+  - if (typeof(src) === 'undefined') src = 'http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/header_bg3.jpg'
   - if (typeof(title) === 'undefined') title = 'FOOD FOCUS ROADMAP'
   - if (typeof(content) === 'undefined') content = 'อริยสงฆ์ทรู สะบึม น็อคฮัลโลวีนโพลล์ไวอากร้ามาราธอน โฮมเมจิกคอนโด เปปเปอร์มินต์ คลิปผ้าห่มไนท์อีโรติก พลาซ่า อึมครึมทาวน์เฮาส์สัมนา จตุคามธุรกรรมโอเพ่น ม้าหินอ่อนความหมายตรวจทาน แรงใจฮิปโปผู้นำ ไคลแม็กซ์กุมภาพันธ์บอยคอตรีโมต โหงวเฮ้งเอ็นทรานซ์ สกรัมตุ๊ดเช็กจิ๊กซาดิสต์ เพียบแปร้แคมป์กราวนด์ลิมูซีน มอนสเตอร์'
     section.item.medium
-      .thumb(style="background-image: url("+src+");")
+      .thumb(style="background: linear-gradient(rgba(20,20,20, .3), rgba(20,20,20, .3)), url("+src+"); background-size: 100%; background-position-y: 600px;")
       .caption
         .inner-container
           .middle-block
             h2.intro.txt-white #{title}
             p.content.txt-white #{content}
 
-mixin banner-book-image(src, book, subtitle, title, content, issue)
-  - if (typeof(src) === 'undefined') src = 'http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/magazine-bg.jpeg'
+mixin banner-book-image(src, book, subtitle, title, content, issue, book_src)
+  - if (typeof(src) === 'undefined') src = 'images/upload/header_bg3.jpg'
   - if (typeof(book) === 'undefined') book = 'http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/book-1.jpg'
   - if (typeof(title) === 'undefined') title = 'Home Improvement Is That Easy'
   - if (typeof(content) === 'undefined') content = 'Whether you want a major home renovation or a small one. At SCB, we offer financing options to meet your needs.'
+  - if (typeof(book_src) === 'undefined') book_src = 'http://www.foodfocusthailand.com/click.php?id=ebook-142'
     section.item
-      .thumb(style="background-image: url("+src+");")
+      .thumb(style="background: linear-gradient(rgba(20,20,20, .3), rgba(20,20,20, .3)), url("+src+"); background-size: 100%; background-position-y: 705px;")
       .caption
         .inner-container
           .middle-block
             .book-img
-              +link-img(book,'')
+              +link-img(book,'',book_src)
             .desc
               h3.sub-title.sub-title-bg.txt-white #{subtitle}
               h2.intro.txt-white.mar-top #{title}
@@ -37,7 +38,7 @@ mixin banner-book-image(src, book, subtitle, title, content, issue)
                   .subscribe
                     a.txt-mediumer.subscribe-btn SUBSCRIBE TO NEWSLETTER
 
-mixin story(src, title, content,href)
+mixin story(src, title, content, href)
   - if (typeof(src) === 'undefined') src = 'http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/photo-md-15.jpg'
   - if (typeof(title) === 'undefined') title = 'Opportunities In Volatile Markets'
   - if (typeof(content) === 'undefined') content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempo.'
@@ -83,9 +84,12 @@ mixin roadmap(src, title, date, href)
   - if (typeof(src) === 'undefined') src = 'http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/thumb-1.jpg'
   - if (typeof(title) === 'undefined') title = 'DRINKING EDITION'
   - if (typeof(date) === 'undefined') date = '10 NOVEMBER 2017'
-  - if (typeof(href) === 'undefined') href = 'roadmap-detail.html'
     article.roadmap
-      +link('',href).image(style="background-image: url("+src+");")
+      - if (typeof(href) === 'undefined') {
+        div.image(style="background-image: url("+src+");")
+      - } else {
+        +link('',href).image(style="background-image: url("+src+");")
+      - }
       .caption
         h2.title-1-thumb #{title}
         h2.title-1-thumb #{date}

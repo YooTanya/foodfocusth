@@ -7,13 +7,13 @@ block vars
 
 block container
   section.banner-wrap
-    +banner('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/magazine-bg.jpeg','ABOUT US','Dedicated to be the industry-focused platform for Food & Beverage Industry, Be Media Focus (Thailand) Co., Ltd. has established in 2006 to create the effective industry-focused media serving Food & Beverage professionals. บริษัท บี มีเดีย โฟกัส (ประเทศไทย) จำกัด ก่อตั้งขึ้นเมื่อปี พ.ศ. 2549 เพื่อสร้างสรรค์งานด้านสื่อ นำเสนอองค์ความรู้ ข้อมูล ข่าวสาร ให้กับผู้ประกอบการในวงการอุตสาหกรรมอาหารและเครื่องดื่ม')
+    +banner('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/header_bg3.jpg','ABOUT US','Dedicated to be the industry-focused platform for Food & Beverage Industry, Be Media Focus (Thailand) Co., Ltd. has established in 2006 to create the effective industry-focused media serving Food & Beverage professionals. บริษัท บี มีเดีย โฟกัส (ประเทศไทย) จำกัด ก่อตั้งขึ้นเมื่อปี พ.ศ. 2549 เพื่อสร้างสรรค์งานด้านสื่อ นำเสนอองค์ความรู้ ข้อมูล ข่าวสาร ให้กับผู้ประกอบการในวงการอุตสาหกรรมอาหารและเครื่องดื่ม')
   section.services-tab(data-tab).pad-top-lg
     .row-centered.narrow(data-tab-header, data-activeByHash="true")
       +link('','#advertiser').col.active
         h3.title-2.light ADVERTISERS
       +link('','#board').col
-        h3.title-2.light BOARD OF CONSULTANTS/ENDORSEMENTS
+        h3.title-2.light BOARD OF CONSULTANTS / <br />ENDORSEMENTS
     section(data-tab-content).pad-top-lg.pad-bot-lg
       .inner#advertiser.active
         .inner-container
@@ -26,53 +26,48 @@ block container
                     ul
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Arcadia.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Inthaco.jpg', 'Inthaco', 'http://www.foodfocusthailand.com/click.php?id=Inthaco_0118')
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Brenntag.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/SentaPack.jpg', 'SentaPack', 'http://www.foodfocusthailand.com/click.php?id=SentaPack_0118')
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Dhawath.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Dhawath.jpg', 'Dhawath', 'http://www.foodfocusthailand.com/click.php?id=Dhawath_0118')
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Ecolab.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Official.jpg', 'Official', 'http://www.foodfocusthailand.com/click.php?id=Official_0118')
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Ferrostaal.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/betterPack.jpg', 'betterPack', 'http://www.foodfocusthailand.com/click.php?id=betterPack_0118')
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Hi-cook.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Forefront.jpg', 'Forefront', 'http://www.foodfocusthailand.com/click.php?id=Forefront_0118')
                     ul
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/IHI.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/MTFS.jpg', 'MTFS', 'http://www.foodfocusthailand.com/click.php?id=MTFS_0118')
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/NewsPacific.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/KH_Roberts.jpg', 'KH_Roberts', 'http://www.foodfocusthailand.com/click.php?id=KH_Roberts_0118')
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Materworld.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Brenntag.jpg', 'Brenntag', 'http://www.foodfocusthailand.com/click.php?id=Brenntag_0118')
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Nutrition.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Materialworld.jpg', 'Materialworld', 'http://www.foodfocusthailand.com/click.php?id=Materialworld_0118')
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Official.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/GNT.jpg', 'GNT', 'http://www.foodfocusthailand.com/click.php?id=GNT_0118')
                       li
                         div
-                          a
-                            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/SentaPack.jpg')
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/DPO.jpg', 'DPO', 'http://www.foodfocusthailand.com/click.php?id=DPO_0118')
+                    ul
+                      li
+                        div
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/BSI.jpg', 'BSI', 'http://www.foodfocusthailand.com/click.php?id=BSI_0118')
+                      li
+                        div
+                            +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Hi-cook.jpg', 'HICOOK', 'http://www.foodfocusthailand.com/click.php?id=HICOOK_0118')
       .inner#board
         .outer(style="background-color: #dddddd;")
           .inner-container

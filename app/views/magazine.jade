@@ -7,11 +7,11 @@ block vars
 
 block container
   section.banner-wrap
-    +banner('images/upload/magazine-bg.jpeg', 'FOOD FOCUS THAILAND MAGAZINE', 'Food Focus Thailand, the monthly trade magazine, which successfully acts as a forum between Food & Beverage producers and suppliers. The magazine aims to deliver well-balanced practical article, timely information, innovative technology, the latest market trends and so on. The premiere issue had been launched since April 2006. ฟู้ด โฟกัส ไทยแลนด์ เป็นนิตยสารรายเดือน เสมือนเป็นเวทีกลางให้กับผู้ผลิตและซัพพลายเออร์ในวงการอุตสาหกรรมอาหารและเครื่องดื่ม นำเสนอข้อมูล ข่าวสาร ที่ทันสมัย และสามารถนำไปประยุกต์ใช้ได้จริง ทั้งในเรื่องของเทคโนโลยี เทรนด์ตลาดล่าสุด และอื่นๆ โดยนิตยสารฉบับปฐมฤกษ์เปิดตัวในเดือนเมษายน 2549')
-  section.services-tab(data-tab).pad-top-lg
+    +banner('images/upload/header_bg3.jpg', 'FOOD FOCUS THAILAND MAGAZINE', 'Food Focus Thailand, the monthly trade magazine, which successfully acts as a forum between Food & Beverage producers and suppliers. The magazine aims to deliver well-balanced practical article, timely information, innovative technology, the latest market trends and so on. The premiere issue had been launched since April 2006. ฟู้ด โฟกัส ไทยแลนด์ เป็นนิตยสารรายเดือน เสมือนเป็นเวทีกลางให้กับผู้ผลิตและซัพพลายเออร์ในวงการอุตสาหกรรมอาหารและเครื่องดื่ม นำเสนอข้อมูล ข่าวสาร ที่ทันสมัย และสามารถนำไปประยุกต์ใช้ได้จริง ทั้งในเรื่องของเทคโนโลยี เทรนด์ตลาดล่าสุด และอื่นๆ โดยนิตยสารฉบับปฐมฤกษ์เปิดตัวในเดือนเมษายน 2549')
+  section.services-tab(data-tab).pad-top-lg.magazine
     .row-centered.narrow(data-tab-header, data-activeByHash="true")
-      +link-img('images/icons/fft_magazine.png','','#foodfocus').col.active
-      +link-img('images/icons/fft_supplement.png','','#specialsup').col
+      +link-img('images/icons/logo_foodfocus.png','','#foodfocus').col.active
+      +link-img('images/icons/logo_suplement.png','','#specialsup').col
     .row-centered.narrow
       h2.title-primary-thumb.mar-bot-md.mar-top-md SUBSCRIBE FOR FREE 
         span
@@ -20,6 +20,10 @@ block container
       .inner#foodfocus.active
         .inner-container
           .row
+            .col-md-3.col-sm-6.col-xs-12
+              +book('images/upload/Food_Jan_142.jpg', 'No. 142', 'Jan 2018', 'http://www.foodfocusthailand.com/click.php?id=ebook-142')
+            .col-md-3.col-sm-6.col-xs-12
+              +book('images/upload/Food_Dec_141.jpg', 'No. 141', 'Dec 2017', 'http://www.foodfocusthailand.com/click.php?id=ebook-141')
             .col-md-3.col-sm-6.col-xs-12
               +book('images/upload/Nov_140.jpg', 'No. 140', 'Nov 2017', 'http://www.foodfocusthailand.com/click.php?id=ebook-140')
             .col-md-3.col-sm-6.col-xs-12
@@ -46,25 +50,29 @@ block container
         .inner-container
           .row
             .col-md-3.col-sm-6.col-xs-12
-              +book('images/upload/Drink_47.jpg', 'Drinking Edition No. 47', 'Nov 2017', 'http://www.foodfocusthailand.com/click.php?id=SUPPLEMENT-40-Meat-2017')
+              +book('images/upload/Drink_47.jpg', 'Drinking Edition No. 47', 'Nov 2017', 'http://www.foodfocusthailand.com/click.php?id=41-DRINKING-2017')
             .col-md-3.col-sm-6.col-xs-12
-              +book('images/upload/Meat_46.jpg', 'Meat & Poultry Edition No. 46', 'Oct 2017', 'http://www.foodfocusthailand.com/eBook/139/#63')
+              +book('images/upload/Meat_46.jpg', 'Meat & Poultry Edition No. 46', 'Oct 2017', 'http://www.foodfocusthailand.com/click.php?id=SUPPLEMENT-40-Meat-2017')
             .col-md-3.col-sm-6.col-xs-12
               +book('images/upload/Chill_45.jpg', 'Chilled & Frozen No. 45', 'July 2017', 'http://www.foodfocusthailand.com/click.php?id=Sub-Chilled-frozen-2017')
             .col-md-3.col-sm-6.col-xs-12
-              +book('images/upload/Functional_44.jpg', 'Functional F&B No. 44', 'Mar 2017', 'http://www.foodfocusthailand.com/eBook/132/#58')
+              +book('images/upload/Functional_44.jpg', 'Functional F&B No. 44', 'Mar 2017', 'http://www.foodfocusthailand.com/click.php?id=Supplement-Drinking')
             .col-md-3.col-sm-6.col-xs-12
-              +book('images/upload/Meat_43.jpg', 'Meat & Poultry No. 43', 'Oct 2016', 'http://www.foodfocusthailand.com/eBook/127/#64')
+              +book('images/upload/Meat_43.jpg', 'Meat & Poultry No. 43', 'Oct 2016', 'http://www.foodfocusthailand.com/click.php?id=Supplement-Meat-43')
             .col-md-3.col-sm-6.col-xs-12
-              +book('images/upload/Drink_42.jpg', 'Drinking Edition No. 42', 'Aug 2016', 'http://www.foodfocusthailand.com/eBook/125/#64')
+              +book('images/upload/Drink_42.jpg', 'Drinking Edition No. 42', 'Aug 2016', 'http://www.foodfocusthailand.com/click.php?id=Supplement-Drinking')
             .col-md-3.col-sm-6.col-xs-12
-              +book('images/upload/Chill_41.jpg', 'Chilled & Frozen No. 41', 'Jul 2016', 'http://www.foodfocusthailand.com/eBook/124/#48')
+              +book('images/upload/Chill_41.jpg', 'Chilled & Frozen No. 41', 'Jul 2016', 'http://www.foodfocusthailand.com/click.php?id=Sub-chilled')
             .col-md-3.col-sm-6.col-xs-12
-              +book('images/upload/NPI_40.jpg', 'New Product Ideas No. 40', 'Mar 2016', 'http://www.foodfocusthailand.com/eBook/120/#62')
+              +book('images/upload/NPI_40.jpg', 'New Product Ideas No. 40', 'Mar 2016', 'http://www.foodfocusthailand.com/click.php?id=sub-NPI2016')
             .col-md-3.col-sm-6.col-xs-12
-              +book('images/upload/Drink_39.jpg', 'Drinking Edition No. 39', 'Oct 2015', 'http://www.foodfocusthailand.com/eBook/115/#54')
+              +book('images/upload/Drink_39.jpg', 'Drinking Edition No. 39', 'Oct 2015', 'http://www.foodfocusthailand.com/click.php?id=sub-Drinking')
             .col-md-3.col-sm-6.col-xs-12
-              +book('images/upload/Chill_38.jpg', 'Chilled & Frozen No. 38', 'Aug 2015', 'http://www.foodfocusthailand.com/eBook/113/#66')
+              +book('images/upload/Chill_38.jpg', 'Chilled & Frozen No. 38', 'Aug 2015', 'http://www.foodfocusthailand.com/click.php?id=sub-Chilled-Frozen')
+              .col-md-3.col-sm-6.col-xs-12
+              +book('images/upload/Retail_37.jpg', 'F&B Retail No. 37', 'Oct 2015', 'http://www.foodfocusthailand.com/click.php?id=sub-37')
+            .col-md-3.col-sm-6.col-xs-12
+              +book('images/upload/Meat_36.jpg', 'Meat & Poultry No. 36', 'Aug 2015', 'http://www.foodfocusthailand.com/click.php?id=sub-36')
           
 
 
