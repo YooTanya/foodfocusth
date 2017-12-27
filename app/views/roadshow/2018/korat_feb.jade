@@ -1,0 +1,39 @@
+extends ../../layouts/layout
+
+block vars
+  -title = 'Food Safety Roadshow # 1: วันศุกร์ที่ 9 กุมภาพันธ์ 2560 จังหวัดนครราชสีมา'
+  -bodyClass = ''
+
+
+block container
+  section.content.pad-top-lg.pad-bot-lg
+    .inner-container
+      .row
+        .col-md-1.hidden-xs.hidden-sm
+          ul.list-icons.pad-top-lg(data-stickyScroll)
+            li: +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/icons/ic-fb.svg','#')
+            li: +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/icons/ic-twitter.svg','#')
+            li: +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/icons/ic-linkedin.svg','#')
+
+        .col-md-8.col-sm-12
+          h3.sub-title-bg.txt-white ROADSHOW
+          .content-header.mar-top
+            span.title.light.txt-black Food Safety Roadshow # 1: Korat
+            span.title-3.light.txt-black.mar-left 9 FEBRUARY 2018
+          .content-body
+            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/korat_Roadshow.jpg').mar-top-md.mar-bot-md
+            p.text-medium นิตยสาร ฟู้ด โฟกัส ไทยแลนด์ เดินสาย 6 จังหวัดทั่วไทย ร่วมเป็นส่วนหนึ่งในการสร้างพื้นฐานองค์ความรู้เรื่อง “อาหารปลอดภัย” เพื่อเพิ่มขีดความสามารถในการแข่งขันของอุตสาหกรรมอาหารและเครื่องดื่มของไทยให้พร้อมก้าวสู่ตลาดในระดับสากลอย่างแข็งแกร่งและยั่งยืน…กับงานสัมมนาในธีม “Food Safety Roadshow” ตลอดปี 2561
+            p.text-medium.mar-top สอบถามรายละเอียดเพิ่มเติม: คุณชาลินี  0869082377
+            p.text-medium.mar-top หรือลงทะเบียนได้ที่ 
+              a(href="https://goo.gl/forms/qVZylT46kE77NYmI2") https://goo.gl/forms/qVZylT46kE77NYmI2
+
+
+        .col-sm-12.hidden-md-up
+          ul.list-icons
+            li: +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/icons/ic-fb.svg','#')
+            li: +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/icons/ic-twitter.svg','#')
+            li: +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/icons/ic-linkedin.svg','#')
+        .col-md-3.col-xs-12
+          .col-sm-12
+
+      
