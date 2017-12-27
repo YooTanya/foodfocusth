@@ -1,0 +1,65 @@
+extends ../../../layouts/layout
+
+block vars
+  -title = 'Snack Trends'
+  -bodyClass = ''
+
+
+block container
+  section.content.pad-top-lg.pad-bot-lg
+    .inner-container
+      .row
+        .col-md-1.hidden-xs.hidden-sm
+
+        .col-md-8.col-sm-12
+          h3.sub-title-bg.txt-white WHATS-IN
+          .content-header.mar-top
+            span.title.light.txt-black Snack Trends
+            span.title-3.light.txt-black.mar-left Translated By: Editorial Team Food Focus Thailand Magazine
+          .content-body
+            +img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Week1_01.jpg').mar-top-md.mar-bot-md
+            p.text-medium 
+              b แนวโน้มของผลิตภัณฑ์อาหารมื้อว่าง
+            p.text-medium.mar-top ข้อมูลจาก Nutraceuticalsworld ระบุว่า ผู้บริโภคกำลังมองหาคุณสมบัติเชิงบวกของผลิตภัณฑ์ขนมขบเคี้ยว และส่วนผสมอาหารเพียงไม่กี่ชนิด ประหนึ่งว่า…ง่ายๆ แต่มีคุณค่า…
+            p.text-medium.mar-top ชาวอเมริกันใส่ใจกับสุขภาพของตนเองมากขึ้น จึงสนใจส่วนผสมในอาหารที่บริโภคว่ามีและไม่มีอะไรบ้าง พวกเขามองหาผลิตภัณฑ์คลีนลาเบล และเริ่มเป็นผู้อ่าน (ฉลาก) ที่ดี โดยอ่านข้อมูลของส่วนผสมอย่างละเอียดถี่ถ้วนมากขึ้น 
+            p.text-medium.mar-top Darren Seifer กรรมการบริหารของกลุ่มบริษัท NPD ณ พอร์ท วอชิงตัน รัฐนิวยอร์ก กล่าวว่า “ผู้คนกำลังมองหาความบริสุทธิ์และความแน่แท้ พวกเขาจะกวาดสายตามองรายการส่วนผสมบนฉลากอย่างรวดเร็ว เพื่อดูว่ามีส่วนผสมอะไรที่ไม่รู้จัก หรือรู้จักแต่ไม่ได้มาจากธรรมชาติบ้าง นั่นเพราะต้องการส่วนผสมอาหารที่เรียบง่ายและคุ้นเคย”
+            p.text-medium.mar-top
+              b เทรนด์โดนๆ ของผลิตภัณฑ์อาหารมื้อว่างเพื่อสุขภาพ
+            p.text-medium.mar-top
+              b • แนวคาวๆ เข้ามาเยือน 
+            p.text-medium ปัจจุบันกลุ่มชาวอเมริกันที่ตระหนักในเรื่องสุขภาพต่างหันหลังให้กับความหวานจากน้ำตาล ผู้ผลิตเริ่มรับรู้ความต้องการของผู้บริโภคด้วยการผลิตขนมหวาน ขนมขบเคี้ยว ที่ใช้น้ำตาลในสูตรลดลง และเพิ่มรสเผ็ดหรือมีรสชาติของอาหารคาวมากขึ้น ดังเช่น Kashi นำเสนอขนมขบเคี้ยวในรูปแบบแท่งหรือบาร์ 2 รสชาติ คือ Basil White Bean & Olive Oil และ Quinoa Corn & Roasted Pepper ทางด้าน Larabar เปิดตัวบาร์ซูเปอร์ฟู้ดออร์แกนิก มาใน 3 รสชาติเผ็ดร้อน คือ Coconut Kale Cacao, Hazelnut Hemp Cacao และ  Turmeric Ginger Beet
+            p.text-medium ‎บริษัทขนาดย่อมลงมาก็ยังหันมาเล่นในตลาดนี้ อย่างเช่น Mediterra นำเสนอผลิตภัณฑ์บาร์หลากหลายรสชาติ ได้แก่ Kale and Pumpkin Seeds, Bell Peppers and Green Olives และ Sundried Tomato and Basil ด้าน Ginger’s Healthy Habits เปิดตัว Veggie trail mix ออกมา 2 รสชาติ เป็นการนำผัก ถั่ว และเมล็ดธัญพืชมาผสมกัน 
+            p.text-medium สำหรับคนรักเนื้อ ทาง Wild Zora นำเสนอ Meat & Veggie Bars หลายรสชาติ เช่น Mediterranean Lamb with Spinach และ Rosemary & Turmeric ส่วน Wilde Boldr มีบาร์ที่ผลิตจากเนื้อวัว เนื้อไก่งวง และเนื้อไก่ ที่ย่างให้สุกอย่างช้าๆ “ทำจากส่วนผสมที่หาได้ในครัวของคุณเอง” 
+            p.text-medium.mar-top
+              b • ว่าด้วยผลไม้ล้วนๆ
+            p.text-medium KIND เปิดตัวผลิตภัณฑ์บาร์ 4 ชนิด ภายใต้ชื่อ Pressed by Kind ซึ่งผลิตจากผลไม้ และยังมีผลิตภัณฑ์ That’s It has That’s It bars ที่เป็นผลไม้ล้วนๆ
+            p.text-medium Jordan Rost รองประธานฝ่ายข้อมูลเชิงลึกของผู้บริโภคแห่ง Nielsen กล่าวว่า แม้ผู้บริโภคจะพยายามหลีกเลี่ยงน้ำตาล แต่น้ำตาลในผลไม้ก็เป็นสิ่งที่ยอมรับได้ “ไม่มีอะไรที่จะแย่โดยสิ้นเชิง และผู้บริโภคก็ยอมรับว่าผลิตผลสดเป็นแหล่งที่ดีของสารอาหาร”
+            p.text-medium.mar-top
+              b • ทางเลือกแบบชิพๆ 
+            p.text-medium ผลิตภัณฑ์บาร์ไม่ใช่รูปแบบเดียวของนวัตกรรมขนมขบเคี้ยว ผลิตภัณฑ์ในรูปแบบแผ่นหรือชิพ (Chip) ตลอดจนรสชาติใหม่ๆ ก็ยังร้อนระอุในเส้นทางของทางเลือกนี้ด้วย อย่างเช่น ป๊อบคอร์นสำเร็จรูป (Pre-popped popcorn) ซึ่งขายดิบขายดีใน 4 ปีที่ผ่านมา จากข้อมูลของ Nielsen พบว่าในเดือนตุลาคม 2560 มียอดขายเพิ่มขึ้นร้อยละ 17 จากปี 2559 โดยเพิ่มขึ้นจากร้อยละ 12 ของปีก่อนหน้า 
+            p.text-medium NatureBox นำเสนอ Pop Pops ป๊อบคอร์นที่ทำให้พองบางส่วน มี 2 รสชาติให้เลือก ส่วนแบรนด์ Open Road Snacks ก็เปิดตัว Poplets ซึ่งทางบริษัทกล่าวว่า “ส่งมอบความพึงพอใจ และรสชาติเยี่ยมของข้าวโพดที่มีส่วนผสมของไฟเบอร์มากขึ้น และไขมันกับแคลอรีที่ลดลง” ในเดือนตุลาคม Ips Snack ได้วางจำหน่ายป๊อบคอร์น 2 รสชาติ ในชื่อ Ips Pop ซึ่งเพิ่มเวย์โปรตีนเข้าไปด้วย
+            p.text-medium “ด้วยความห่วงใยในปัญหาสุขภาพอย่างโรคอ้วนและโรคเบาหวานชนิดที่ 2 ที่เพิ่มสูงขึ้น เป็นแรงผลักดันให้ผู้บริโภคเพิ่มความระมัดระวังในการเลือกซื้ออาหารทานเล่นมากขึ้นด้วย นี่เป็นผลดีที่ทำให้ขนมขบเคี้ยวทางเลือกที่ทำจากถั่วชิกพีได้รับความสนใจ” Mr.Vierhile อธิบาย
+            p.text-medium.mar-top
+              a(href="http://www.foodfocusthailand.com/click.php?id=18JAN_content3")
+                b Full article (TH-EN) 
+
+
+        .col-sm-12.hidden-md-up
+          ul.list-icons
+            li: +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/icons/ic-fb.svg','#')
+            li: +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/icons/ic-twitter.svg','#')
+            li: +link-img('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/icons/ic-linkedin.svg','#')
+        .col-md-3.col-xs-12
+          .col-sm-12
+            h2.title Other Articles
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/Week1_02.jpg', 'Food Defense', 'http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/whats-in/2018/jan/food-defense.html')
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/2_nov.jpg', 'Food Industry in Germany', 'http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/whats-in/2017/nov/food-industry.html')
+          .col-md-12.col-sm-6
+            .content-item
+              +life-stage('http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/images/upload/4_nov.jpg', 'Russian Market: “Free From” Food Tren', 'http://www.foodfocusthailand.com/foodfocusthailand-2017/demo/whats-in/2017/nov/free-from.html')
+
+      
